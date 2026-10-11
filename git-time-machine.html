@@ -66,8 +66,10 @@ border-radius:6px;padding:5px 12px 5px 16px;white-space:nowrap;
 .night-body{
 display:grid;grid-template-columns:1.15fr.85fr;gap:26px;align-items:start;
 }
-.story{background:transparent;padding:4px 6px;font-family:"Kaiti SC","STKaiti","KaiTi","TW-Kai","Noto Serif SC",serif}
-.story p{margin-bottom:1.1em;text-indent:2em;font-size:17px;color:#43382a}
+.story{background:#f3ecda;border:1px solid #e7dcc0;border-radius:16px;padding:26px 30px 22px;font-family:"Kaiti SC","STKaiti","KaiTi","TW-Kai","Noto Serif SC",serif}
+.story-label{margin-bottom:16px}
+.story p{margin-bottom:1.15em;text-indent:2em;font-size:18px;line-height:2.05;color:#3a2e1f}
+.story>p:first-child{font-size:19px}
 .story>p:first-child{text-indent:0}
 .story code,.textbook code{
 font-family:"SF Mono",Menlo,Consolas,monospace;font-size:.86em;
@@ -81,7 +83,7 @@ overflow-x:auto;margin:14px 0 18px;font-size:13.5px;line-height:1.7;
 .story pre code{background:none;border:none;padding:0;color:inherit}
 aside.tiaowaihua{
 margin:20px 0 6px;padding:14px 18px;border-left:3px solid var(--gold);
-background:var(--gold-soft);border-radius:0 10px 10px 0;font-size:14.5px;color:var(--ink-soft);
+background:rgba(176,141,62,.12);border-radius:0 10px 10px 0;font-size:15px;color:#4a3f2c;
 }
 aside.tiaowaihua.t-label{
 font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
@@ -116,7 +118,7 @@ text-align:center;margin:30px auto 0;max-width:760px;color:var(--ink-soft);font-
 .hook::before{content:"— — —";display:block;color:var(--line);letter-spacing:.5em;margin-bottom:14px}
 .hook b{color:var(--gold)}
 .t-label{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;font-size:12px;letter-spacing:.25em;color:var(--gold);display:block;margin-bottom:6px;font-weight:600}
-aside.example{margin:20px 0 6px;padding:14px 18px;border-left:3px solid #6f6a5e;background:#f4f1e6;border-radius:0 10px 10px 0;font-size:14.5px;color:#4a463c}
+aside.example{margin:20px 0 6px;padding:14px 18px;border-left:3px solid #6f6a5e;background:#faf7ee;border-radius:0 10px 10px 0;font-size:15px;color:#4a463c}
 aside.example .t-label{color:#6f6a5e}
 .part-div{max-width:760px;margin:80px auto 0;text-align:center}
 .part-div h2{font-size:22px;letter-spacing:.25em;color:var(--gold);margin-bottom:10px}
@@ -132,9 +134,9 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 .textbook{position:static}
 .wrap{padding:0 18px}
 }
-.night-fig{margin:18px 0;text-align:center}
-.night-fig img{max-width:100%;max-height:340px;width:auto;border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,.12);cursor:zoom-in}
-.story>p:first-child::first-letter{font-size:2.1em;font-weight:700;color:var(--gold);float:left;line-height:1.15;margin:3px 4px 0 0}
+.night-fig{margin:6px 0 26px;text-align:center}
+.night-fig img{width:100%;height:auto;border-radius:14px;box-shadow:0 6px 24px rgba(60,45,20,.14);cursor:zoom-in;display:block}
+.story>p:first-child::first-letter{font-size:2.3em;font-weight:700;color:var(--gold);float:left;line-height:1.1;margin:4px 6px 0 0}
 </style>
 </head>
 <body>
@@ -164,9 +166,10 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <!-- 第一夜 -->
 <section class="night" id="n1">
 <div class="night-head"><span class="night-no">第一夜</span><h2>为什么需要时光机</h2></div>
-<figure class="night-fig"><a href="img/night-01-final.png" target="_blank" rel="noopener"><img src="img/night-01-final.png" alt="第一夜插图"></a></figure>
+<figure class="night-fig"><a href="img/night-01-wide-v3.png" target="_blank" rel="noopener"><img src="img/night-01-wide-v3.png" alt="第一夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
+<span class="t-label story-label">故事线</span>
 <p>女巫J接了个活：给楼下花店做网站。</p>
 <p>一下午，她灵感爆棚，把首页改成了葬礼风——黑底，白字，正中一朵枯萎的玫瑰，凋零得很有艺术感。</p>
 <p>老板娘端着茶杯路过，瞥了一眼，茶差点洒了：“姑娘，我卖的是花，不是 sadness。”</p>
@@ -193,9 +196,10 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <!-- 第二夜 -->
 <section class="night" id="n2">
 <div class="night-head"><span class="night-no">第二夜</span><h2>开机三件事</h2></div>
-<figure class="night-fig"><a href="img/night-02-final.png" target="_blank" rel="noopener"><img src="img/night-02-final.png" alt="第二夜插图"></a></figure>
+<figure class="night-fig"><a href="img/night-02-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-02-wide-v1.png" alt="第二夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
+<span class="t-label story-label">故事线</span>
 <p>时光机开机，第一句："你谁？报上名来。"</p>
 <pre><code>git config --global user.name "女巫J"
 git config --global user.email "witchj@example.com"</code></pre>
@@ -213,7 +217,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <p>女巫J第一次按快门，忘了喊名字。时光机倒没骂她，"唰"地摊开一本小册子："现想也行，写这儿吧。"</p>
 <p>原来 <code>-m</code> 后面的，就是照片的名字。带上 <code>-m</code>，名字直接喊出来；不带，它就打开编辑器等你现写——反正不能没有名字。老手都带 <code>-m</code>，快，还不用等它翻册子。</p>
 <aside class="example"><span class="t-label">我们的例子</span>第二夜写完，我是这么存的：<code>git add git-time-machine.md</code> 取景，再 <code>git commit -m "第二夜：开机三件事"</code> 按快门。<code>git log</code> 里多了一行，照片洗出来了，有名字，有署名。名字起得越清楚，未来的你越感谢现在的你。</aside>
-<aside class="tiaowaihua"><span class="t-label">题外话</span>其实有个懒人咒：<code>git commit -a -m "名字"</code>，取景快门一步到位。但新手先练两步走，手感对了再偷懒。先学会走，再学飞。</aside>
+<aside class="tiaowaihua"><span class="t-label">题外话</span>其实有个懒人咒：<code>git commit -a -m "名字"</code>，取景快门一步到位。但注意：<code>-a</code> 只管已经拍过照的老文件（已跟踪的），新文件还是得先 <code>add</code>，它不认生面孔。新手先练两步走，手感对了再偷懒。先学会走，再学飞。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第二夜</div>
@@ -240,9 +244,10 @@ git config --global user.email "witchj@example.com"</code></pre>
 <!-- 第三夜 -->
 <section class="night" id="n3">
 <div class="night-head"><span class="night-no">第三夜</span><h2>翻相册</h2></div>
-<figure class="night-fig"><a href="img/night-03-final.png" target="_blank" rel="noopener"><img src="img/night-03-final.png" alt="第三夜插图"></a></figure>
+<figure class="night-fig"><a href="img/night-03-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-03-wide-v1.png" alt="第三夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
+<span class="t-label story-label">故事线</span>
 <p>照片存多了，得会翻。女巫J学会三招。</p>
 <p>第一招，体检：</p>
 <pre><code>git status</code></pre>
@@ -291,9 +296,10 @@ git config --global user.email "witchj@example.com"</code></pre>
 <!-- 第四夜 -->
 <section class="night" id="n4">
 <div class="night-head"><span class="night-no">第四夜</span><h2>后悔药，兑现</h2></div>
-<figure class="night-fig"><a href="img/night-04-final.png" target="_blank" rel="noopener"><img src="img/night-04-final.png" alt="第四夜插图"></a></figure>
+<figure class="night-fig"><a href="img/night-04-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-04-wide-v1.png" alt="第四夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
+<span class="t-label story-label">故事线</span>
 <p>后悔药，今晚兑现。两种吃法。</p>
 <p>轻量版，只还一张照片：</p>
 <pre><code>git checkout -- index.html</code></pre>
@@ -313,6 +319,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="tb-note">✎ 记：HEAD 就是“你现在站在哪张照片上”。<code>HEAD~1</code> = 上一张，<code>HEAD~2</code> = 上上一张。</div>
 <dt>git checkout -- &lt;文件名&gt;</dt>
 <dd>用仓库里的版本覆盖工作区的文件。只影响这一个文件，其他不动。后悔药轻量版。</dd>
+<div class="tb-note">✎ 补：新版 Git 更推荐 <code>git restore &lt;文件名&gt;</code>，作用一样，语义更清楚（restore = 还原）。</div>
 <dt>git reset --hard HEAD~1</dt>
 <dd>把 HEAD 指回上一个提交，同时清空暂存区、覆盖工作区。整条时间线倒带。已经 commit 过的，reflog 里还留着底，能抢救回来；但<b>没 commit 的改动，真没了</b>，神仙难救。</dd>
 <div class="tb-note">✎ 记：<code>--hard</code> 是核按钮。没 commit 的改动，真没了——提交是你的安全带。</div>
@@ -328,9 +335,10 @@ git config --global user.email "witchj@example.com"</code></pre>
 <!-- 第五夜 -->
 <section class="night" id="n5">
 <div class="night-head"><span class="night-no">第五夜</span><h2>平行宇宙</h2></div>
-<figure class="night-fig"><a href="img/night-05-final.png" target="_blank" rel="noopener"><img src="img/night-05-final.png" alt="第五夜插图"></a></figure>
+<figure class="night-fig"><a href="img/night-05-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-05-wide-v1.png" alt="第五夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
+<span class="t-label story-label">故事线</span>
 <p>时光机的终极功能：开平行宇宙。分支，就是这么回事。</p>
 <pre><code>git branch night-mode</code></pre>
 <p>新宇宙诞生，名字叫 night-mode。主宇宙叫 main，原版在里面睡大觉，毫发无伤。</p>
@@ -365,9 +373,10 @@ git config --global user.email "witchj@example.com"</code></pre>
 <!-- 第六夜 -->
 <section class="night" id="n6">
 <div class="night-head"><span class="night-no">第六夜</span><h2>宇宙合并，与打架</h2></div>
-<figure class="night-fig"><a href="img/night-06-final.png" target="_blank" rel="noopener"><img src="img/night-06-final.png" alt="第六夜插图"></a></figure>
+<figure class="night-fig"><a href="img/night-06-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-06-wide-v1.png" alt="第六夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
+<span class="t-label story-label">故事线</span>
 <p>搬成果，叫合并。先回主宇宙：</p>
 <pre><code>git switch main
 git merge night-mode</code></pre>
@@ -411,9 +420,10 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <!-- 第七夜 -->
 <section class="night" id="n7">
 <div class="night-head"><span class="night-no">第七夜</span><h2>云端时间管理局</h2></div>
-<figure class="night-fig"><a href="img/night-07-final.png" target="_blank" rel="noopener"><img src="img/night-07-final.png" alt="第七夜插图"></a></figure>
+<figure class="night-fig"><a href="img/night-07-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-07-wide-v1.png" alt="第七夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
+<span class="t-label story-label">故事线</span>
 <p>GitHub，就是云端时间管理局。免费帮你存时间线，还能给朋友看。</p>
 <p>先登记地址：</p>
 <pre><code>git remote add origin &lt;仓库地址&gt;</code></pre>
@@ -455,9 +465,10 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <!-- 第八夜 -->
 <section class="night" id="n8">
 <div class="night-head"><span class="night-no">第八夜</span><h2>亲手造一台</h2></div>
-<figure class="night-fig"><a href="img/night-08-final.png" target="_blank" rel="noopener"><img src="img/night-08-final.png" alt="第八夜插图"></a></figure>
+<figure class="night-fig"><a href="img/night-08-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-08-wide-v1.png" alt="第八夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
+<span class="t-label story-label">故事线</span>
 <p>今夜没有女巫J，只有你。</p>
 <p>1. 去 GitHub 建一个仓库，叫 joyce-way，公开。<br>2. 本地咒语：</p>
 <pre><code>git init
@@ -501,9 +512,10 @@ git push -u origin main</code></pre>
 <!-- 第九夜 -->
 <section class="night" id="n9">
 <div class="night-head"><span class="night-no">第九夜</span><h2>不许拍照名单，与魔法钥匙</h2></div>
-<figure class="night-fig"><a href="img/night-09-final.png" target="_blank" rel="noopener"><img src="img/night-09-final.png" alt="第九夜插图"></a></figure>
+<figure class="night-fig"><a href="img/night-09-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-09-wide-v1.png" alt="第九夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
+<span class="t-label story-label">故事线</span>
 <p>女巫J第一次 push，兴高采烈。结果第二天，管理局寄来警告信：</p>
 <p>"你上传了 3000 个文件。其中 2990 个是垃圾。另：你把密码纸条也传上来了，全世界都能看见。"</p>
 <p>女巫J后背发凉。她的网站文件夹里躺着：<code>node_modules</code>（依赖大礼包，几千个文件）、<code>.DS_Store</code>（Mac 的小尾巴）、还有一张写着密码的小纸条 <code>.env</code>！</p>
@@ -514,11 +526,12 @@ git push -u origin main</code></pre>
 .env</code></pre>
 <p>年糕凑过来："把我的毛也加上！我的毛不许拍！"女巫J："你的毛已经满世界都是了，来不及了。"</p>
 <p>名单生效。再 <code>add</code> 再 <code>commit</code>，垃圾们原地消失，干干净净。</p>
-<p>搞定名单，新的烦恼来了：每次 push，管理局都要查身份证（输 token），一天查八遍。女巫J烦了。</p>
-<p>老女巫教她："去配一把魔法钥匙。"</p>
+<p>搞定名单，新的烦恼来了：第一次 push，管理局要查身份证（输 token）。女巫J嫌麻烦："老要报身份证，烦。"</p>
+<p>老女巫说："两条路。HTTPS 让系统的钥匙串记住 token，以后免查——这是管理局官方推荐的正道；或者配一把 SSH 魔法钥匙，一劳永逸。"</p>
+<p>女巫J选了钥匙——她喜欢仪式感。</p>
 <pre><code>ssh-keygen -t ed25519 -C "witchj@example.com"</code></pre>
-<p>一把钥匙掰成两半：私藏的那半（私钥）谁也不给，交公的那半（公钥）贴到 GitHub 的 Settings → SSH keys。从此 push，碰一下就行，再也不用报身份证。</p>
-<aside class="example"><span class="t-label">我们的例子</span>这篇教程的仓库根目录下，躺着一个 <code>.gitignore</code>。里面写着：半成品图（带 -labeled、-diagram 后缀的）不许入库，只有成品图（night-*-final.png）才配进仓库。名单在前，仓库才干净。SSH 钥匙发布那天再配，配一次，push 终身免查身份证。</aside>
+<p>一把钥匙掰成两半：私藏的那半（私钥）谁也不给，交公的那半（公钥）贴到 GitHub 的 Settings → SSH keys。从此 push，碰一下就行。</p>
+<aside class="example"><span class="t-label">我们的例子</span>这篇教程的仓库根目录下，躺着一个 <code>.gitignore</code>。里面写着：半成品图（带 -labeled、-diagram 后缀的）不许入库，只有成品图（night-*-wide-v1.png）才配进仓库。名单在前，仓库才干净。发布那天，HTTPS 和 SSH 二选一：钥匙串记住 token，或者配一把 SSH 钥匙——手册推荐前者。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>真实事故类型：有人把云服务密钥传上公开 GitHub，被扫号机器人抓到盗刷，账单爆炸——这类事故在圈内隔段时间就来一出。现在 GitHub 有 secret scanning，抓到密钥会自动报警，但别指望它，先写好名单。</aside>
 <aside class="tiaowaihua"><span class="t-label">小挑战</span>给你的网站项目写一个 <code>.gitignore</code>，三行起。写完 <code>git status</code> 看一眼，垃圾还在不在。</aside>
 </div>
@@ -531,7 +544,7 @@ git push -u origin main</code></pre>
 <dd><code>node_modules/</code>、<code>.DS_Store</code>、<code>.env</code>。<code>.env</code> 里是密码密钥，传上公开仓库等于把家门钥匙贴在布告栏。</dd>
 <dt>注意</dt>
 <dd>名单只对"还没拍过照的"生效。已经 commit 进去的，得先删掉再加名单。</dd>
-<div class="tb-note">✎ 记：<code>.gitignore</code> 只管“还没拍照的”。已经 commit 的，先 <code>git rm</code> 删掉，再进名单。</div>
+<div class="tb-note">✎ 记：<code>.gitignore</code> 只管“还没拍照的”。已经 commit 的，先 <code>git rm --cached &lt;文件名&gt;</code> 取消跟踪（本地文件还在），再进名单。</div>
 <dt>SSH</dt>
 <dd><code>ssh-keygen -t ed25519 -C "邮箱"</code> 生成钥匙对。公钥（<code>.pub</code> 结尾）贴到 GitHub，私钥自己藏好，谁也不给。</dd>
 <dt>HTTPS vs SSH</dt>
@@ -547,9 +560,10 @@ git push -u origin main</code></pre>
 <!-- 第十夜 -->
 <section class="night" id="n10">
 <div class="night-head"><span class="night-no">第十夜</span><h2>请求合并</h2></div>
-<figure class="night-fig"><a href="img/night-10-final.png" target="_blank" rel="noopener"><img src="img/night-10-final.png" alt="第十夜插图"></a></figure>
+<figure class="night-fig"><a href="img/night-10-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-10-wide-v1.png" alt="第十夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
+<span class="t-label story-label">故事线</span>
 <p>女巫J在管理局闲逛，发现一座"公共魔法塔"——开源的咒语大全，人人可用。但塔上有个错别字：把"悬浮咒"写成了"悬浮猪"。</p>
 <p>她挽起袖子想直接改，push 被拒："这不是你的宇宙！"（Permission denied）</p>
 <p>老女巫笑了："公共的塔，不能硬闯。正确的姿势叫 PR（Pull Request，请求合并）。五步走："</p>
@@ -587,9 +601,10 @@ git push -u origin main</code></pre>
 <!-- 第十一夜 -->
 <section class="night" id="n11">
 <div class="night-head"><span class="night-no">第十一夜 · 终夜</span><h2>展示橱窗</h2></div>
-<figure class="night-fig"><a href="img/night-11-final-v2.png" target="_blank" rel="noopener"><img src="img/night-11-final-v2.png" alt="第十一夜 · 终夜插图"></a></figure>
+<figure class="night-fig"><a href="img/night-11-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-11-wide-v1.png" alt="第十一夜 · 终夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
+<span class="t-label story-label">故事线</span>
 <p>女巫J的网站在时光机里躺了很久，只有她自己能看。她想让全世界看到。</p>
 <p>管理局有个"展示橱窗"，叫 <b>GitHub Pages</b>。把网站放进橱窗，免费，全世界可看。</p>
 <p>步骤简单得像开灯：</p>
