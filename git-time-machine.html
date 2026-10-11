@@ -198,7 +198,7 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <p>女巫僵住了。她想回到今天早上——那时候首页还是粉的，花还是开的，老板娘还是笑的。</p>
 <p>可没有时光机。她只能重做，一行一行往回改，改到半夜，边改边哭，哭到玫瑰都看不清了。</p>
 <aside class="example"><span class="t-label">我们的例子</span>你正在读的这篇教程，自己就是用 Git 写的：11 夜，11 个 commit，一夜一张快照。哪天我想翻出第一夜的初稿，<code>git log</code> 找到它，<code>checkout</code> 就行。版本控制不是大道理，是这篇教程的出生证明。</aside>
-<aside class="tiaowaihua"><span class="t-label">题外话</span>说书人敲醒木：你们知道"git"这个词，本来是什么意思吗？英式俚语里，git 是"笨蛋、讨厌鬼"。发明者 Linus 自己说的："我是个自大狂，我用自己的名字命名所有项目。先是 Linux，现在是 git。"——他骂的是自己。时光机的学名，是发明者的自嘲。</aside>
+<aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>说书人敲醒木：你们知道"git"这个词，本来是什么意思吗？英式俚语里，git 是"笨蛋、讨厌鬼"。发明者 Linus 自己说的："我是个自大狂，我用自己的名字命名所有项目。先是 Linux，现在是 git。"——他骂的是自己。时光机的学名，是发明者的自嘲。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第一夜</div>
@@ -241,7 +241,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <p>女巫第一次按快门，忘了喊名字。时光机倒没骂她，"唰"地摊开一本小册子："现想也行，写这儿吧。"</p>
 <p>原来 <code>-m</code> 后面的，就是照片的名字。带上 <code>-m</code>，名字直接喊出来；不带，它就打开编辑器等你现写——反正不能没有名字。老手都带 <code>-m</code>，快，还不用等它翻册子。</p>
 <aside class="example"><span class="t-label">我们的例子</span>第二夜写完，我是这么存的：<code>git add git-time-machine.md</code> 取景，再 <code>git commit -m "第二夜：开机三件事"</code> 按快门。<code>git log</code> 里多了一行，照片洗出来了，有名字，有署名。名字起得越清楚，未来的你越感谢现在的你。</aside>
-<aside class="tiaowaihua"><span class="t-label">题外话</span>其实有个懒人咒：<code>git commit -a -m "名字"</code>，取景快门一步到位。但注意：<code>-a</code> 只管已经拍过照的老文件（已跟踪的），新文件还是得先 <code>add</code>，它不认生面孔。新手先练两步走，手感对了再偷懒。先学会走，再学飞。</aside>
+<aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>其实有个懒人咒：<code>git commit -a -m "名字"</code>，取景快门一步到位。但注意：<code>-a</code> 只管已经拍过照的老文件（已跟踪的），新文件还是得先 <code>add</code>，它不认生面孔。新手先练两步走，手感对了再偷懒。先学会走，再学飞。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第二夜</div>
@@ -297,7 +297,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 第九夜：不许拍照名单，与魔法钥匙
 第十夜：请求合并
 第十一夜：展示橱窗</code></pre>一行一夜。<code>--reverse</code> 是让它从老到新排，不然最新的永远在最上面，强迫症难受。</aside>
-<aside class="tiaowaihua"><span class="t-label">题外话</span>时光机里有个书签，叫 HEAD，意思是"你现在站在哪张照片上"。以后你听见 <code>HEAD~1</code>，就是"往前一张照片"。先记住书签这个概念，第四夜要用。</aside>
+<aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>时光机里有个书签，叫 HEAD，意思是"你现在站在哪张照片上"。以后你听见 <code>HEAD~1</code>，就是"往前一张照片"。先记住书签这个概念，第四夜要用。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第三夜</div>
@@ -337,7 +337,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <p><code>HEAD~1</code> 就是"书签往前挪一张"。回到上一个快照。按下去之前，时光机抖三抖，弹出红字："倒带之后回不来，你想好了吗？"</p>
 <p>女巫的手，悬在半空。</p>
 <aside class="example"><span class="t-label">我们的例子</span>假如我把第三夜例子的措辞改坏了，越改越别扭——创可贴上场：<code>git checkout -- git-time-machine.md</code>，这个文件的改动回到上次 commit 的样子，其他十夜毫发无伤。至于 <code>reset --hard</code>？11 个 commit，我一个都不想丢，核按钮一次没碰过。创可贴常用，核按钮供着。</aside>
-<aside class="tiaowaihua"><span class="t-label">题外话</span>reset 其实有三档：<code>--soft</code>、<code>--mixed</code>、<code>--hard</code>，一档比一档狠。记住最狠的那档叫 hard 就够了，其他的等你成了大女巫再说。</aside>
+<aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>reset 其实有三档：<code>--soft</code>、<code>--mixed</code>、<code>--hard</code>，一档比一档狠。记住最狠的那档叫 hard 就够了，其他的等你成了大女巫再说。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第四夜</div>
@@ -377,7 +377,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <pre><code>git branch</code></pre>
 <p>不加名字，就是查户口：现在有几个宇宙，前面带 <code>*</code> 的是你正站的那个。</p>
 <aside class="example"><span class="t-label">我们的例子</span>假如写第五夜时，我想试试把“平行宇宙”改叫“大胆宇宙”，又怕改完后悔——开个分支：<code>git branch test-rename</code>，跳过去随便改。试完觉得还是“平行宇宙”好，分支一删，主宇宙干干净净。一张小纸条的成本，零心理负担。</aside>
-<aside class="tiaowaihua"><span class="t-label">题外话</span>分支在时光机里只是一张小纸条（指针），41 个字节，开一万个宇宙也不心疼。所以大胆开，别省 —— 这句话值得再听一遍。</aside>
+<aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>分支在时光机里只是一张小纸条（指针），41 个字节，开一万个宇宙也不心疼。所以大胆开，别省 —— 这句话值得再听一遍。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第五夜</div>
@@ -425,7 +425,7 @@ git merge night-mode</code></pre>
 git commit -m "裁决：按钮用红色"</code></pre>
 <p>世界恢复和平。</p>
 <aside class="example"><span class="t-label">我们的例子</span>标准的 merge 长这样：分支上改了个错别字，主分支上同一段也动了句话，<code>git merge</code> 时举白旗。打开文件，<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> 上面是主宇宙，下面是分支，亲手二选一，删干净标记，<code>git add</code> + <code>git commit</code>，世界和平。裁决权在人，不在机器。</aside>
-<aside class="tiaowaihua"><span class="t-label">题外话</span>快进合并时，时光机的内心独白："这点路，就不劳您费心了，我自己走过去。"——主宇宙没动过，它自己挪下书签就完事。</aside>
+<aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>快进合并时，时光机的内心独白："这点路，就不劳您费心了，我自己走过去。"——主宇宙没动过，它自己挪下书签就完事。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第六夜</div>
@@ -472,7 +472,7 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <p>整台时光机复制一台，搬到新电脑：</p>
 <pre><code>git clone &lt;仓库地址&gt;</code></pre>
 <aside class="example"><span class="t-label">我们的例子</span>等这篇教程推上 GitHub，流程就是第七夜这套：本地写完 <code>git push</code>，云端多一个 commit；换台电脑，<code>git clone</code>，11 夜连历史一起搬走。<code>origin</code> 这个昵称，我也随大流——全世界都叫它“老家”，我不搞特殊。</aside>
-<aside class="tiaowaihua"><span class="t-label">题外话</span>GitHub 的吉祥物是只章鱼猫，叫 Octocat。它的身世很草根：原型是英国设计师 Simon Oxley 挂在图库网站上卖的一张 stock 插画（名字就叫“Octopuss”），被 GitHub 创始人买下来做了 404 页面。为什么偏偏是章鱼？因为 git 里有个“octopus merge”（章鱼合并，一次合好几个分支）——章鱼猫就是这个梗的化身。“八只手同时干活”是后人附会的说法，可爱，但别当官方口径。</aside>
+<aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>GitHub 的吉祥物是只章鱼猫，叫 Octocat。它的身世很草根：原型是英国设计师 Simon Oxley 挂在图库网站上卖的一张 stock 插画（名字就叫“Octopuss”），被 GitHub 创始人买下来做了 404 页面。为什么偏偏是章鱼？因为 git 里有个“octopus merge”（章鱼合并，一次合好几个分支）——章鱼猫就是这个梗的化身。“八只手同时干活”是后人附会的说法，可爱，但别当官方口径。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第七夜</div>
@@ -570,7 +570,7 @@ git push -u origin main</code></pre>
 <pre><code>ssh-keygen -t ed25519 -C "witchj@example.com"</code></pre>
 <p>一把钥匙掰成两半：私藏的那半（私钥）谁也不给，交公的那半（公钥）贴到 GitHub 的 Settings → SSH keys。从此 push，碰一下就行。</p>
 <aside class="example"><span class="t-label">我们的例子</span>这篇教程的仓库根目录下，躺着一个 <code>.gitignore</code>。里面写着：半成品图（带 -labeled、-diagram 后缀的）不许入库，只有成品图（night-*-wide-v1.png）才配进仓库。名单在前，仓库才干净。发布那天，HTTPS 和 SSH 二选一：钥匙串记住 token，或者配一把 SSH 钥匙——手册推荐前者。</aside>
-<aside class="tiaowaihua"><span class="t-label">题外话</span>真实事故类型：有人把云服务密钥传上公开 GitHub，被扫号机器人抓到盗刷，账单爆炸——这类事故在圈内隔段时间就来一出。现在 GitHub 有 secret scanning，抓到密钥会自动报警，但别指望它，先写好名单。</aside>
+<aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>真实事故类型：有人把云服务密钥传上公开 GitHub，被扫号机器人抓到盗刷，账单爆炸——这类事故在圈内隔段时间就来一出。现在 GitHub 有 secret scanning，抓到密钥会自动报警，但别指望它，先写好名单。</aside>
 <aside class="tiaowaihua"><span class="t-label">小挑战</span>给你的网站项目写一个 <code>.gitignore</code>，三行起。写完 <code>git status</code> 看一眼，垃圾还在不在。</aside>
 </div>
 <div class="textbook">
@@ -611,7 +611,7 @@ git push -u origin main</code></pre>
 <p>塔主（仓库主人）看到了，提了个小意见："顺手把隔壁的'飘浮猪'也改了吧。"女巫改完再 push，PR 自动更新，不用重发。</p>
 <p>塔主点了 Merge。错别字消失。女巫的名字，出现在了贡献者名单里。</p>
 <aside class="example"><span class="t-label">我们的例子</span>这篇教程暂时还没开过 PR——它还在我手里长大。但流程已经想好了：发布之后，谁发现错别字，欢迎 Fork → 改 → 发 PR。"把猪改回咒"这种好事，在这篇教程里同样有效。开源的礼仪，从第一卷就开始。</aside>
-<aside class="tiaowaihua"><span class="t-label">题外话</span>GitHub 有个"种田游戏"： contribution graph（贡献小绿格）。每天 commit 格子就绿一块，有人为了填满一年的绿格天天打卡 —— 程序员式的自律，可爱又心酸。</aside>
+<aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>GitHub 有个"种田游戏"： contribution graph（贡献小绿格）。每天 commit 格子就绿一块，有人为了填满一年的绿格天天打卡 —— 程序员式的自律，可爱又心酸。</aside>
 <aside class="tiaowaihua"><span class="t-label">小挑战</span>去 GitHub 找一个你喜欢的开源项目，只看它的 PR 列表，读三个 PR 的标题和描述，感受"请求合并"的语气。</aside>
 </div>
 <div class="textbook">
@@ -655,7 +655,7 @@ git push -u origin main</code></pre>
 <p>年糕第一个访问，在网站上踩出了一串梅花印 —— 第一个访客，是只猫。</p>
 <p>从此，每次 <code>git push</code>，橱窗自动更新。改完 push，一两分钟后，全世界看到新版。不用 FTP，不用服务器，不花一分钱。</p>
 <aside class="example"><span class="t-label">我们的例子</span>第十一夜写完，这篇教程离"橱窗"只差三步：Settings → Pages → 选 main。发布那天 push 一下，一两分钟后全世界看到新版。到时候，第一个访客希望不是年糕——它只会踩梅花印，不会提 PR。</aside>
-<aside class="tiaowaihua"><span class="t-label">题外话</span>你的 curtainraiser 学习站，就可以这样发布。无数开源项目的文档，都住在 Pages 的橱窗里 —— 免费、稳定、体面。</aside>
+<aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>你的 curtainraiser 学习站，就可以这样发布。无数开源项目的文档，都住在 Pages 的橱窗里 —— 免费、稳定、体面。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第十一夜</div>
