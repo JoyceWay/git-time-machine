@@ -234,7 +234,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="tb-note">✎ 记：三个区排排坐——工作区（干活）、暂存区（取景框）、仓库（相册）。add 管前一半，commit 管后一半。</div>
 <dt>提交（commit）</dt>
 <dd><code>git commit</code> 把暂存区的内容拍成一张快照，存进仓库。<code>-m</code> 后面跟本次说明（message）：带上它，名字直接喊出来；不带它，git 就打开编辑器等你现写。两种都能存，老手都带 <code>-m</code>，快。</dd>
-<div class="tb-note">✎ 记：<code>-m</code> 后面跟“照片名”。不带 <code>-m</code> 也能存，但编辑器会弹出来等你现写，新手第一次别慌。</div>
+
 <dt>标准三步</dt>
 <dd><code>git add</code>（取景）→ <code>git commit -m</code>（快门）→ 快照入库。</dd>
 </dl>
@@ -288,7 +288,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="tb-note">✎ 记：diff 默认比“工作区 vs 暂存区”。想看“暂存区 vs 上次提交”，加 <code>--cached</code>。</div>
 <dt>三者的分工</dt>
 <dd>status 看现在（照镜子），log 看过去（翻目录），diff 看差别（找不同）。</dd>
-<div class="tb-note">✎ 诀：status 照镜子（现在）、log 翻目录（过去）、diff 找不同（差别）。</div>
+
 </dl>
 <div class="one-line">一句话总结：status 照镜子，log 翻目录，diff 找不同。</div>
 </div>
@@ -319,7 +319,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <dl>
 <dt>HEAD</dt>
 <dd>一个指针（pointer，书签），永远指向"你现在站在哪"。<code>HEAD~1</code> = 上一张快照，<code>HEAD~2</code> = 上上张。</dd>
-<div class="tb-note">✎ 记：HEAD 就是“你现在站在哪张照片上”。<code>HEAD~1</code> = 上一张，<code>HEAD~2</code> = 上上一张。</div>
+
 <dt>git checkout -- &lt;文件名&gt;</dt>
 <dd>用仓库里的版本覆盖工作区的文件。只影响这一个文件，其他不动。后悔药轻量版。</dd>
 <div class="tb-note">✎ 补：新版 Git 更推荐 <code>git restore &lt;文件名&gt;</code>，作用一样，语义更清楚（restore = 还原）。</div>
@@ -365,7 +365,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <dd>主分支（主宇宙），默认的大本营。所有宇宙最后都要往这里汇总。</dd>
 <dt>为什么分支这么便宜</dt>
 <dd>因为它只是一张 41 字节的小纸条，不复制文件。所以大胆开，别省。</dd>
-<div class="tb-note">✎ 记：分支 = 41 字节的小纸条。结论：开分支不心疼，一天开十个都行。</div>
+
 </dl>
 <div class="one-line">一句话总结：branch = 平行宇宙，互不干扰。main 是主宇宙，大本营。</div>
 </div>
@@ -412,7 +412,7 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <dd><code>git add</code> + <code>git commit</code> 再存一张快照，合并才算完成。</dd>
 <dt>快进合并（fast-forward）</dt>
 <dd>如果主宇宙这段时间啥也没干，合并只是"把书签往前挪"，连真正的合并都算不上。</dd>
-<div class="tb-note">✎ 补：主分支没动过，合并只是“挪书签”，快得连真正的合并都算不上。</div>
+
 </dl>
 <div class="one-line">一句话总结：merge = 搬运成果；conflict = 同一行两种改法，机器投降，人来裁决。裁完再存一张快照。</div>
 </div>
@@ -450,14 +450,14 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <dd>存在云端（GitHub）的仓库。<code>git remote add origin &lt;地址&gt;</code> 给它起个本地昵称叫 origin。</dd>
 <dt>推送（push）</dt>
 <dd><code>git push -u origin main</code>，把本地 main 分支推上云端。<code>-u</code>（--set-upstream）记住对应关系，以后只用 <code>git push</code>。</dd>
-<div class="tb-note">✎ 记：<code>-u</code> = 记住路。第一次 push 带 <code>-u</code>，以后光 <code>git push</code> 就行。</div>
+
 <dt>拉取（pull）</dt>
 <dd><code>git pull</code>，把云端的新变化下载下来并合并到本地。多人协作每天第一句咒。</dd>
 <dt>克隆（clone）</dt>
 <dd><code>git clone &lt;地址&gt;</code>，把云端仓库整台复制到本地，连历史照片一起搬走。换电脑、帮朋友搭环境都用它。</dd>
 <dt>本地（local）vs 云端（cloud）</dt>
 <dd>本地是你的机器，云端是保险柜。push 上传，pull 下载，clone 整台搬走。</dd>
-<div class="tb-note">✎ 诀：push 上传、pull 下载、clone 整台搬走。六个字。</div>
+
 </dl>
 <div class="one-line">一句话总结：GitHub 是云端保险柜。push 上传，pull 下载，clone 整台搬走。</div>
 </div>
@@ -587,7 +587,7 @@ git push -u origin main</code></pre>
 <dd>向原仓库主人发出的合并申请。"我改好了，求 review，求合并。"</dd>
 <dt>标准五步</dt>
 <dd>Fork → Clone → 开分支改 → Push 到自己的仓库 → 发 PR。</dd>
-<div class="tb-note">✎ 诀：复刻→下载→开分支改→推回自己家→发 PR。五步，背下来。</div>
+
 <dt>Code Review（代码审查）</dt>
 <dd>塔主 review 你的改动，提意见，你改完再 push，PR 自动更新。合并前把关，保证质量。</dd>
 <dt>Merge</dt>
@@ -630,7 +630,7 @@ git push -u origin main</code></pre>
 <dd><code>用户名.github.io</code> 是你的门面（一个账号一个）；<code>用户名.github.io/仓库名</code> 是每个项目的橱窗。先开项目站，够用。</dd>
 <dt>自动重新部署</dt>
 <dd>每次 push 到 main 分支，Pages 自动重新发布。改完就推，推完一两分钟上线。</dd>
-<div class="tb-note">✎ 记：push 即发布。改完就推，推完一两分钟上线。</div>
+
 <dt>自定义域名（custom domain）（以后）</dt>
 <dd>可以把自己的域名（如 joyce 的双域名）绑上去，现在先用免费网址跑通。</dd>
 <dt>免费额度</dt>
