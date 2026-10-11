@@ -66,8 +66,8 @@ border-radius:6px;padding:5px 12px 5px 16px;white-space:nowrap;
 .night-body{
 display:grid;grid-template-columns:1.15fr.85fr;gap:26px;align-items:start;
 }
-.story{background:transparent;padding:4px 6px}
-.story p{margin-bottom:1.1em;text-indent:2em;font-size:17px;color:#2e2a24}
+.story{background:transparent;padding:4px 6px;font-family:"Kaiti SC","STKaiti","KaiTi","TW-Kai","Noto Serif SC",serif}
+.story p{margin-bottom:1.1em;text-indent:2em;font-size:17px;color:#43382a}
 .story>p:first-child{text-indent:0}
 .story code,.textbook code{
 font-family:"SF Mono",Menlo,Consolas,monospace;font-size:.86em;
@@ -109,6 +109,7 @@ padding:8px 12px;margin-top:10px;font-family:"SF Mono",Menlo,monospace;font-size
 margin-top:18px;padding:12px 16px;background:var(--gold-soft);
 border-radius:8px;font-weight:600;color:var(--ink);
 }
+.textbook .tb-note{font-family:"Kaiti SC","STKaiti","KaiTi","TW-Kai",sans-serif;color:var(--green);font-size:13.5px;line-height:1.85;margin:8px 0 6px}
 .hook{
 text-align:center;margin:30px auto 0;max-width:760px;color:var(--ink-soft);font-size:15.5px;
 }
@@ -133,8 +134,6 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 }
 .night-fig{margin:18px 0;text-align:center}
 .night-fig img{max-width:100%;max-height:340px;width:auto;border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,.12);cursor:zoom-in}
-aside.biji{margin:20px 0 6px;padding:14px 18px;border-left:3px solid var(--green);background:var(--green-soft);border-radius:0 10px 10px 0;font-size:14.5px;color:#3c4632}
-aside.biji .t-label{color:var(--green)}
 .story>p:first-child::first-letter{font-size:2.1em;font-weight:700;color:var(--gold);float:left;line-height:1.15;margin:3px 4px 0 0}
 </style>
 </head>
@@ -175,13 +174,13 @@ aside.biji .t-label{color:var(--green)}
 <p>可没有时光机。她只能重做，一行一行往回改，改到半夜，边改边哭，哭到玫瑰都看不清了。</p>
 <aside class="example"><span class="t-label">我们的例子</span>你正在读的这篇教程，自己就是用 Git 写的：11 夜，11 个 commit，一夜一张快照。哪天我想翻出第一夜的初稿，<code>git log</code> 找到它，<code>checkout</code> 就行。版本控制不是大道理，是这篇教程的出生证明。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>说书人敲醒木：你们知道"git"这个词，本来是什么意思吗？英式俚语里，git 是"笨蛋、讨厌鬼"。发明者 Linus 自己说的："我是个自大狂，我用自己的名字命名所有项目。先是 Linux，现在是 git。"——他骂的是自己。时光机的学名，是发明者的自嘲。</aside>
-<aside class="biji"><span class="t-label">💡 笔记</span>版本控制不是备份。备份是“存一份”，版本控制是“记住每一次变化”——能回去，才叫时光机。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第一夜</div>
 <dl>
 <dt>版本控制（version control）</dt>
 <dd>记录文件每一次变化的系统。每次记录叫一个<b>版本（version）</b>，随时可以回到任意一个版本。</dd>
+<div class="tb-note">✎ 记：关键词两个——“记住每一次变化”“随时回去”。</div>
 <dt>为什么需要</dt>
 <dd>人会改错、会后悔、会想试新想法又怕弄坏旧的。版本控制就是"后悔药"的工程实现。</dd>
 </dl>
@@ -215,7 +214,6 @@ git config --global user.email "witchj@example.com"</code></pre>
 <p>原来 <code>-m</code> 后面的，就是照片的名字。带上 <code>-m</code>，名字直接喊出来；不带，它就打开编辑器等你现写——反正不能没有名字。老手都带 <code>-m</code>，快，还不用等它翻册子。</p>
 <aside class="example"><span class="t-label">我们的例子</span>第二夜写完，我是这么存的：<code>git add git-time-machine.md</code> 取景，再 <code>git commit -m "第二夜：开机三件事"</code> 按快门。<code>git log</code> 里多了一行，照片洗出来了，有名字，有署名。名字起得越清楚，未来的你越感谢现在的你。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>其实有个懒人咒：<code>git commit -a -m "名字"</code>，取景快门一步到位。但新手先练两步走，手感对了再偷懒。先学会走，再学飞。</aside>
-<aside class="biji"><span class="t-label">💡 笔记</span>`git commit` 不加 `-m`，会打开编辑器让你写留言。第一次遇到别慌，写完保存退出就行。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第二夜</div>
@@ -226,8 +224,10 @@ git config --global user.email "witchj@example.com"</code></pre>
 <dd>你实际改文件的地方，就是文件夹本身。</dd>
 <dt>暂存区（staging area）</dt>
 <dd>工作区和仓库之间的"取景框"。<code>git add</code> 把改动搬进去，你可以只选一部分文件，不必全存。</dd>
+<div class="tb-note">✎ 记：三个区排排坐——工作区（干活）、暂存区（取景框）、仓库（相册）。add 管前一半，commit 管后一半。</div>
 <dt>提交（commit）</dt>
 <dd><code>git commit</code> 把暂存区的内容拍成一张快照，存进仓库。<code>-m</code> 后面跟本次说明（message）：带上它，名字直接喊出来；不带它，git 就打开编辑器等你现写。两种都能存，老手都带 <code>-m</code>，快。</dd>
+<div class="tb-note">✎ 记：<code>-m</code> 后面跟“照片名”。不带 <code>-m</code> 也能存，但编辑器会弹出来等你现写，新手第一次别慌。</div>
 <dt>标准三步</dt>
 <dd><code>git add</code>（取景）→ <code>git commit -m</code>（快门）→ 快照入库。</dd>
 </dl>
@@ -267,7 +267,6 @@ git config --global user.email "witchj@example.com"</code></pre>
 第十夜：请求合并
 第十一夜：展示橱窗</code></pre>一行一夜。<code>--reverse</code> 是让它从老到新排，不然最新的永远在最上面，强迫症难受。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>时光机里有个书签，叫 HEAD，意思是"你现在站在哪张照片上"。以后你听见 <code>HEAD~1</code>，就是"往前一张照片"。先记住书签这个概念，第四夜要用。</aside>
-<aside class="biji"><span class="t-label">💡 笔记</span>`git diff` 默认比的是“工作区 vs 暂存区”。想看“暂存区 vs 上次提交”，用 `git diff --cached`。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第三夜</div>
@@ -278,8 +277,10 @@ git config --global user.email "witchj@example.com"</code></pre>
 <dd>查看提交历史（谁、何时、拍了什么）。<code>--oneline</code> 把每条记录压成一行，目录式浏览。</dd>
 <dt>git diff</dt>
 <dd>查看"还没取景的改动"具体改了什么。工作区 vs 暂存区，逐行找不同。</dd>
+<div class="tb-note">✎ 记：diff 默认比“工作区 vs 暂存区”。想看“暂存区 vs 上次提交”，加 <code>--cached</code>。</div>
 <dt>三者的分工</dt>
 <dd>status 看现在（照镜子），log 看过去（翻目录），diff 看差别（找不同）。</dd>
+<div class="tb-note">✎ 诀：status 照镜子（现在）、log 翻目录（过去）、diff 找不同（差别）。</div>
 </dl>
 <div class="one-line">一句话总结：status 照镜子，log 翻目录，diff 找不同。</div>
 </div>
@@ -303,17 +304,18 @@ git config --global user.email "witchj@example.com"</code></pre>
 <p>女巫J的手，悬在半空。</p>
 <aside class="example"><span class="t-label">我们的例子</span>假如我把第三夜例子的措辞改坏了，越改越别扭——创可贴上场：<code>git checkout -- git-time-machine.md</code>，这个文件的改动回到上次 commit 的样子，其他十夜毫发无伤。至于 <code>reset --hard</code>？11 个 commit，我一个都不想丢，核按钮一次没碰过。创可贴常用，核按钮供着。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>reset 其实有三档：<code>--soft</code>、<code>--mixed</code>、<code>--hard</code>，一档比一档狠。记住最狠的那档叫 hard 就够了，其他的等你成了大女巫再说。</aside>
-<aside class="biji"><span class="t-label">💡 笔记</span>`reset --hard` 真正危险的是没提交的工作。提交过的一般能用 reflog 找回来，没提交的找不回来——提交是你的安全带。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第四夜</div>
 <dl>
 <dt>HEAD</dt>
 <dd>一个指针（pointer，书签），永远指向"你现在站在哪"。<code>HEAD~1</code> = 上一张快照，<code>HEAD~2</code> = 上上张。</dd>
+<div class="tb-note">✎ 记：HEAD 就是“你现在站在哪张照片上”。<code>HEAD~1</code> = 上一张，<code>HEAD~2</code> = 上上一张。</div>
 <dt>git checkout -- &lt;文件名&gt;</dt>
 <dd>用仓库里的版本覆盖工作区的文件。只影响这一个文件，其他不动。后悔药轻量版。</dd>
 <dt>git reset --hard HEAD~1</dt>
 <dd>把 HEAD 指回上一个提交，同时清空暂存区、覆盖工作区。整条时间线倒带。已经 commit 过的，reflog 里还留着底，能抢救回来；但<b>没 commit 的改动，真没了</b>，神仙难救。</dd>
+<div class="tb-note">✎ 记：<code>--hard</code> 是核按钮。没 commit 的改动，真没了——提交是你的安全带。</div>
 <dt>危险等级</dt>
 <dd>checkout 是创可贴，reset --hard 是核按钮。新手先只用 checkout。</dd>
 </dl>
@@ -338,7 +340,6 @@ git config --global user.email "witchj@example.com"</code></pre>
 <p>不加名字，就是查户口：现在有几个宇宙，前面带 <code>*</code> 的是你正站的那个。</p>
 <aside class="example"><span class="t-label">我们的例子</span>假如写第五夜时，我想试试把“平行宇宙”改叫“大胆宇宙”，又怕改完后悔——开个分支：<code>git branch test-rename</code>，跳过去随便改。试完觉得还是“平行宇宙”好，分支一删，主宇宙干干净净。一张小纸条的成本，零心理负担。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>分支在时光机里只是一张小纸条（指针），41 个字节，开一万个宇宙也不心疼。所以大胆开，别省 —— 这句话值得再听一遍。</aside>
-<aside class="biji"><span class="t-label">💡 笔记</span>分支只是一张 41 字节的小纸条，开分支几乎零成本。大胆开，别省。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第五夜</div>
@@ -353,6 +354,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <dd>主分支（主宇宙），默认的大本营。所有宇宙最后都要往这里汇总。</dd>
 <dt>为什么分支这么便宜</dt>
 <dd>因为它只是一张 41 字节的小纸条，不复制文件。所以大胆开，别省。</dd>
+<div class="tb-note">✎ 记：分支 = 41 字节的小纸条。结论：开分支不心疼，一天开十个都行。</div>
 </dl>
 <div class="one-line">一句话总结：branch = 平行宇宙，互不干扰。main 是主宇宙，大本营。</div>
 </div>
@@ -383,7 +385,6 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <p>世界恢复和平。</p>
 <aside class="example"><span class="t-label">我们的例子</span>标准的 merge 长这样：分支上改了个错别字，主分支上同一段也动了句话，<code>git merge</code> 时举白旗。打开文件，<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> 上面是主宇宙，下面是分支，亲手二选一，删干净标记，<code>git add</code> + <code>git commit</code>，世界和平。裁决权在人，不在机器。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>快进合并时，时光机的内心独白："这点路，就不劳您费心了，我自己走过去。"——主宇宙没动过，它自己挪下书签就完事。</aside>
-<aside class="biji"><span class="t-label">💡 笔记</span>合并冲突不丢代码。Git 只是不知道选哪边，两个版本都原样留着，等你裁决。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第六夜</div>
@@ -392,12 +393,14 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <dd><code>git merge &lt;分支名&gt;</code>，把指定分支的成果并入当前分支。先 <code>switch</code> 回主宇宙，再 merge。</dd>
 <dt>冲突（conflict）</dt>
 <dd>两个分支改了同一文件的同一行，Git 无法自动判断听谁的，合并暂停，等人裁决。</dd>
+<div class="tb-note">✎ 记：冲突不是坏了，是 Git 在问“听谁的”。两种改法都留着，等你裁决——代码没丢，别慌。</div>
 <dt>冲突标记（conflict markers）</dt>
 <dd><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> 到 <code>=======</code> 之间是当前分支的内容，<code>=======</code> 到 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 分支名</code> 之间是对方的内容。亲手二选一（或融合），删掉所有标记符号。</dd>
 <dt>裁完之后</dt>
 <dd><code>git add</code> + <code>git commit</code> 再存一张快照，合并才算完成。</dd>
 <dt>快进合并（fast-forward）</dt>
 <dd>如果主宇宙这段时间啥也没干，合并只是"把书签往前挪"，连真正的合并都算不上。</dd>
+<div class="tb-note">✎ 补：主分支没动过，合并只是“挪书签”，快得连真正的合并都算不上。</div>
 </dl>
 <div class="one-line">一句话总结：merge = 搬运成果；conflict = 同一行两种改法，机器投降，人来裁决。裁完再存一张快照。</div>
 </div>
@@ -426,7 +429,6 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <pre><code>git clone &lt;仓库地址&gt;</code></pre>
 <aside class="example"><span class="t-label">我们的例子</span>等这篇教程推上 GitHub，流程就是第七夜这套：本地写完 <code>git push</code>，云端多一个 commit；换台电脑，<code>git clone</code>，11 夜连历史一起搬走。<code>origin</code> 这个昵称，我也随大流——全世界都叫它“老家”，我不搞特殊。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>GitHub 的吉祥物是只章鱼猫，叫 Octocat。它的身世很草根：原型是英国设计师 Simon Oxley 挂在图库网站上卖的一张 stock 插画（名字就叫“Octopuss”），被 GitHub 创始人买下来做了 404 页面。为什么偏偏是章鱼？因为 git 里有个“octopus merge”（章鱼合并，一次合好几个分支）——章鱼猫就是这个梗的化身。“八只手同时干活”是后人附会的说法，可爱，但别当官方口径。</aside>
-<aside class="biji"><span class="t-label">💡 笔记</span>`push -u` 的 `-u` 是“记住路”。设一次上游，以后 `git push` 就行。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第七夜</div>
@@ -435,12 +437,14 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <dd>存在云端（GitHub）的仓库。<code>git remote add origin &lt;地址&gt;</code> 给它起个本地昵称叫 origin。</dd>
 <dt>推送（push）</dt>
 <dd><code>git push -u origin main</code>，把本地 main 分支推上云端。<code>-u</code>（--set-upstream）记住对应关系，以后只用 <code>git push</code>。</dd>
+<div class="tb-note">✎ 记：<code>-u</code> = 记住路。第一次 push 带 <code>-u</code>，以后光 <code>git push</code> 就行。</div>
 <dt>拉取（pull）</dt>
 <dd><code>git pull</code>，把云端的新变化下载下来并合并到本地。多人协作每天第一句咒。</dd>
 <dt>克隆（clone）</dt>
 <dd><code>git clone &lt;地址&gt;</code>，把云端仓库整台复制到本地，连历史照片一起搬走。换电脑、帮朋友搭环境都用它。</dd>
 <dt>本地（local）vs 云端（cloud）</dt>
 <dd>本地是你的机器，云端是保险柜。push 上传，pull 下载，clone 整台搬走。</dd>
+<div class="tb-note">✎ 诀：push 上传、pull 下载、clone 整台搬走。六个字。</div>
 </dl>
 <div class="one-line">一句话总结：GitHub 是云端保险柜。push 上传，pull 下载，clone 整台搬走。</div>
 </div>
@@ -467,13 +471,13 @@ git push -u origin main</code></pre>
 <p>国王（你）："再讲一夜！"</p>
 <p>说书人："欲知后事如何，且看你的第一行 <code>git init</code>。"</p>
 <aside class="example"><span class="t-label">我们的例子</span>第八夜那条龙，这篇教程的本地部分就是这么游过来的：<code>git init</code> 建仓库 → <code>git add</code> 取景 → <code>git commit</code> 快门，一夜一游，游了 11 次。剩下的 <code>remote</code> + <code>push</code>，等发布那天，照着第八夜再游一次就行。</aside>
-<aside class="biji"><span class="t-label">💡 笔记</span>`git commit -a` 只收已经跟踪过的文件。新文件？先 `git add`，没得偷懒。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第八夜</div>
 <dl>
 <dt>今夜的咒语（按顺序念）</dt>
 <dd><span class="cmd">git init — 造时光机</span><span class="cmd">git add . — 取景</span><span class="cmd">git commit -m "我的第一张快照" — 快门</span><span class="cmd">git remote add origin &lt;地址&gt; — 登记云端地址</span><span class="cmd">git push -u origin main — 上传，记住地址</span></dd>
+<div class="tb-note">✎ 记：五步口诀——造（init）、选（add）、拍（commit）、登记（remote）、传（push）。</div>
 <dt>验收标准</dt>
 <dd>去 GitHub 打开 joyce-way 仓库，能看到你的文件和第一张快照，今夜就算修行圆满。</dd>
 </dl>
@@ -516,7 +520,6 @@ git push -u origin main</code></pre>
 <p>一把钥匙掰成两半：私藏的那半（私钥）谁也不给，交公的那半（公钥）贴到 GitHub 的 Settings → SSH keys。从此 push，碰一下就行，再也不用报身份证。</p>
 <aside class="example"><span class="t-label">我们的例子</span>这篇教程的仓库根目录下，躺着一个 <code>.gitignore</code>。里面写着：半成品图（带 -labeled、-diagram 后缀的）不许入库，只有成品图（night-*-final.png）才配进仓库。名单在前，仓库才干净。SSH 钥匙发布那天再配，配一次，push 终身免查身份证。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>真实事故类型：有人把云服务密钥传上公开 GitHub，被扫号机器人抓到盗刷，账单爆炸——这类事故在圈内隔段时间就来一出。现在 GitHub 有 secret scanning，抓到密钥会自动报警，但别指望它，先写好名单。</aside>
-<aside class="biji"><span class="t-label">💡 笔记</span>`.gitignore` 管不住已经跟踪的文件。另外：GitHub 现在 push 不认密码，得用 token。</aside>
 <aside class="tiaowaihua"><span class="t-label">小挑战</span>给你的网站项目写一个 <code>.gitignore</code>，三行起。写完 <code>git status</code> 看一眼，垃圾还在不在。</aside>
 </div>
 <div class="textbook">
@@ -528,10 +531,12 @@ git push -u origin main</code></pre>
 <dd><code>node_modules/</code>、<code>.DS_Store</code>、<code>.env</code>。<code>.env</code> 里是密码密钥，传上公开仓库等于把家门钥匙贴在布告栏。</dd>
 <dt>注意</dt>
 <dd>名单只对"还没拍过照的"生效。已经 commit 进去的，得先删掉再加名单。</dd>
+<div class="tb-note">✎ 记：<code>.gitignore</code> 只管“还没拍照的”。已经 commit 的，先 <code>git rm</code> 删掉，再进名单。</div>
 <dt>SSH</dt>
 <dd><code>ssh-keygen -t ed25519 -C "邮箱"</code> 生成钥匙对。公钥（<code>.pub</code> 结尾）贴到 GitHub，私钥自己藏好，谁也不给。</dd>
 <dt>HTTPS vs SSH</dt>
 <dd>HTTPS 是 GitHub 官方推荐的方式，配合系统凭据管理器（比如 macOS 的钥匙串）记住 token 后，之后 push 不用每次都输；SSH 则是配一次钥匙、之后免打扰。两种都行，看你顺手。故事里走 SSH，是因为"配一次管终身"听起来很爽。</dd>
+<div class="tb-note">✎ 补：GitHub 官方推荐 HTTPS + 凭据管理器记 token。新手先走 HTTPS，SSH 是进阶玩具。</div>
 </dl>
 <div class="one-line">一句话总结：.gitignore 是不许拍照名单，SSH 是魔法钥匙。一个管干净，一个管省事。</div>
 </div>
@@ -553,7 +558,6 @@ git push -u origin main</code></pre>
 <p>塔主点了 Merge。错别字消失。女巫J的名字，出现在了贡献者名单里。</p>
 <aside class="example"><span class="t-label">我们的例子</span>这篇教程暂时还没开过 PR——它还在我手里长大。但流程已经想好了：发布之后，谁发现错别字，欢迎 Fork → 改 → 发 PR。"把猪改回咒"这种好事，在这篇教程里同样有效。开源的礼仪，从第一卷就开始。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>GitHub 有个"种田游戏"： contribution graph（贡献小绿格）。每天 commit 格子就绿一块，有人为了填满一年的绿格天天打卡 —— 程序员式的自律，可爱又心酸。</aside>
-<aside class="biji"><span class="t-label">💡 笔记</span>Fork 是“复印一份到你名下”，PR 是“递纸条请对方收”。先复印，再递条，顺序别反。</aside>
 <aside class="tiaowaihua"><span class="t-label">小挑战</span>去 GitHub 找一个你喜欢的开源项目，只看它的 PR 列表，读三个 PR 的标题和描述，感受"请求合并"的语气。</aside>
 </div>
 <div class="textbook">
@@ -561,10 +565,12 @@ git push -u origin main</code></pre>
 <dl>
 <dt>复刻（Fork）</dt>
 <dd>在 GitHub 云端把别人的仓库复制一份到你名下。和 clone 的区别：fork 是云端复制，clone 是下载到本地。</dd>
+<div class="tb-note">✎ 记：fork 是云端复制（到你名下），clone 是下载到本地。先 fork 再 clone，顺序别反。</div>
 <dt>PR（Pull Request，请求合并）</dt>
 <dd>向原仓库主人发出的合并申请。"我改好了，求 review，求合并。"</dd>
 <dt>标准五步</dt>
 <dd>Fork → Clone → 开分支改 → Push 到自己的仓库 → 发 PR。</dd>
+<div class="tb-note">✎ 诀：复刻→下载→开分支改→推回自己家→发 PR。五步，背下来。</div>
 <dt>Code Review（代码审查）</dt>
 <dd>塔主 review 你的改动，提意见，你改完再 push，PR 自动更新。合并前把关，保证质量。</dd>
 <dt>Merge</dt>
@@ -593,7 +599,6 @@ git push -u origin main</code></pre>
 <p>从此，每次 <code>git push</code>，橱窗自动更新。改完 push，一两分钟后，全世界看到新版。不用 FTP，不用服务器，不花一分钱。</p>
 <aside class="example"><span class="t-label">我们的例子</span>第十一夜写完，这篇教程离"橱窗"只差三步：Settings → Pages → 选 main。发布那天 push 一下，一两分钟后全世界看到新版。到时候，第一个访客希望不是年糕——它只会踩梅花印，不会提 PR。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>你的 curtainraiser 学习站，就可以这样发布。无数开源项目的文档，都住在 Pages 的橱窗里 —— 免费、稳定、体面。</aside>
-<aside class="biji"><span class="t-label">💡 笔记</span>Pages 发布后一般 1–2 分钟生效，不是下一秒。等不及就去 Actions 看小黄点。</aside>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第十一夜</div>
@@ -602,10 +607,12 @@ git push -u origin main</code></pre>
 <dd>GitHub 免费的静态网站托管。把仓库变成网站，一个网址，全世界访问。</dd>
 <dt>开启三步</dt>
 <dd>Settings → Pages → 选 main 分支 → 保存。等一两分钟，网址生效。</dd>
+<div class="tb-note">✎ 记：Settings → Pages → main → 保存。等一两分钟，不是下一秒——去喝口水。</div>
 <dt>用户站（user site）vs 项目站（project site）</dt>
 <dd><code>用户名.github.io</code> 是你的门面（一个账号一个）；<code>用户名.github.io/仓库名</code> 是每个项目的橱窗。先开项目站，够用。</dd>
 <dt>自动重新部署</dt>
 <dd>每次 push 到 main 分支，Pages 自动重新发布。改完就推，推完一两分钟上线。</dd>
+<div class="tb-note">✎ 记：push 即发布。改完就推，推完一两分钟上线。</div>
 <dt>自定义域名（custom domain）（以后）</dt>
 <dd>可以把自己的域名（如 joyce 的双域名）绑上去，现在先用免费网址跑通。</dd>
 <dt>免费额度</dt>
