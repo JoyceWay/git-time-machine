@@ -1,4 +1,4 @@
-# 半成品不入库：只有成品图（night-*-final.png）才配进仓库
-img/*-diagram.png
-img/*-labeled.png
+# 半成品不入库：只有成品图（night-*-wide-v*.png）才配进仓库
+img/*-diagram*.png
+img/*-labeled*.png
 .DS_Store
