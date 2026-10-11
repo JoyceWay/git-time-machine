@@ -22,6 +22,8 @@
 
 ## 第一夜：为什么需要时光机
 
+![](img/night-01-final.png)
+
 
 女巫J给花店做网站。一下午，她把首页改成了葬礼风。黑底白字，配一朵枯萎的玫瑰。
 
@@ -48,6 +50,8 @@
 ---
 
 ## 第二夜：开机三件事
+
+![](img/night-02-final.png)
 
 
 时光机开机，第一句："你谁？报上名来。"
@@ -112,6 +116,8 @@ git commit -m "把首页改成葬礼风"
 ---
 
 ## 第三夜：翻相册
+
+![](img/night-03-final.png)
 
 
 照片存多了，得会翻。女巫J学会三招。
@@ -179,6 +185,8 @@ $ git log --pretty=format:"%s" --reverse
 
 ## 第四夜：后悔药，兑现
 
+![](img/night-04-final.png)
+
 
 后悔药，今晚兑现。两种吃法。
 
@@ -221,6 +229,8 @@ git reset --hard HEAD~1
 ---
 
 ## 第五夜：平行宇宙
+
+![](img/night-05-final.png)
 
 
 时光机的终极功能：开平行宇宙。分支（branch），就是这么回事。
@@ -266,6 +276,8 @@ git branch
 ---
 
 ## 第六夜：宇宙合并，与打架
+
+![](img/night-06-final.png)
 
 
 搬成果，叫合并（merge）。先回主宇宙：
@@ -321,6 +333,8 @@ git commit -m "裁决：按钮用红色"
 ---
 
 ## 第七夜：云端时间管理局
+
+![](img/night-07-final.png)
 
 
 GitHub，就是云端时间管理局。免费帮你存时间线，还能给朋友看。
@@ -381,6 +395,8 @@ git clone <仓库地址>
 
 ## 第八夜：亲手造一台
 
+![](img/night-08-final.png)
+
 
 今夜没有女巫J，只有你。
 
@@ -422,6 +438,8 @@ git push -u origin main
 ---
 
 ## 第九夜：不许拍照名单，与魔法钥匙
+
+![](img/night-09-final.png)
 
 
 女巫J第一次 push，兴高采烈。结果第二天，管理局寄来警告信：
@@ -480,6 +498,8 @@ ssh-keygen -t ed25519 -C "witchj@example.com"
 
 ## 第十夜：请求合并
 
+![](img/night-10-final.png)
+
 
 女巫J在管理局闲逛，发现一座"公共魔法塔"——开源的咒语大全，人人可用。但塔上有个错别字：把"悬浮咒"写成了"悬浮猪"。
 
@@ -524,6 +544,8 @@ ssh-keygen -t ed25519 -C "witchj@example.com"
 ---
 
 ## 第十一夜（终夜）：展示橱窗
+
+![](img/night-11-final-v2.png)
 
 
 女巫J的网站在时光机里躺了很久，只有她自己能看。她想让全世界看到。
