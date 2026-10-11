@@ -67,7 +67,8 @@ border-radius:6px;padding:5px 12px 5px 16px;white-space:nowrap;
 display:grid;grid-template-columns:1.15fr.85fr;gap:26px;align-items:start;
 }
 .story{background:transparent;padding:4px 6px}
-.story p{margin-bottom:1.1em}
+.story p{margin-bottom:1.1em;text-indent:2em;font-size:17px;color:#2e2a24}
+.story>p:first-child{text-indent:0}
 .story code,.textbook code{
 font-family:"SF Mono",Menlo,Consolas,monospace;font-size:.86em;
 background:#f1ece0;border:1px solid var(--line);border-radius:5px;padding:1px 7px;
@@ -167,10 +168,11 @@ aside.biji .t-label{color:var(--green)}
 <figure class="night-fig"><a href="img/night-01-final.png" target="_blank" rel="noopener"><img src="img/night-01-final.png" alt="第一夜插图"></a></figure>
 <div class="night-body">
 <div class="story">
-<p>女巫J给花店做网站。一下午，她把首页改成了葬礼风。黑底白字，配一朵枯萎的玫瑰。</p>
-<p>老板娘路过，看了一眼："我卖的是花，不是 sadness。"</p>
-<p>女巫J想回到今天早上。那时候首页还是粉的，花还是开的。</p>
-<p>没有时光机，只能重做。她重做到半夜，边做边哭。</p>
+<p>女巫J接了个活：给楼下花店做网站。</p>
+<p>一下午，她灵感爆棚，把首页改成了葬礼风——黑底，白字，正中一朵枯萎的玫瑰，凋零得很有艺术感。</p>
+<p>老板娘端着茶杯路过，瞥了一眼，茶差点洒了："姑娘，我卖的是花，不是 sadness。"</p>
+<p>女巫J僵住了。她想回到今天早上——那时候首页还是粉的，花还是开的，老板娘还是笑的。</p>
+<p>可没有时光机。她只能重做，一行一行往回改，改到半夜，边改边哭，哭到玫瑰都看不清了。</p>
 <aside class="example"><span class="t-label">我们的例子</span>你正在读的这篇教程，自己就是用 Git 写的：11 夜，11 个 commit，一夜一张快照。哪天我想翻出第一夜的初稿，<code>git log</code> 找到它，<code>checkout</code> 就行。版本控制不是大道理，是这篇教程的出生证明。</aside>
 <aside class="tiaowaihua"><span class="t-label">题外话</span>说书人敲醒木：你们知道"git"这个词，本来是什么意思吗？英式俚语里，git 是"笨蛋、讨厌鬼"。发明者 Linus 自己说的："我是个自大狂，我用自己的名字命名所有项目。先是 Linux，现在是 git。"——他骂的是自己。时光机的学名，是发明者的自嘲。</aside>
 <aside class="biji"><span class="t-label">💡 笔记</span>版本控制不是备份。备份是“存一份”，版本控制是“记住每一次变化”——能回去，才叫时光机。</aside>
