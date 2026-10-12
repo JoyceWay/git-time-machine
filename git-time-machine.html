@@ -198,7 +198,7 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <section class="prologue">
 <p class="pro-frame">像山鲁佐德那样，说书人要用<strong>十一个夜晚</strong>，给你讲完女巫的故事——<br>每晚都在天亮前，停在最要紧的地方。</p>
 <div class="dramatis"><span class="t-label">人物介绍</span><br>
-<b>女巫</b> —— 见习女巫，暗黑美学重度患者。接了楼下花店「春日花开」网店的单子，开业倒计时 11 天。<br>
+<b>女巫</b> —— 见习女巫，暗黑美学重度患者。接了楼下花店「春日花开」网店的单子，开业倒计时 11 天。接单原因：年糕太能吃，猫粮钱告急。<br>
 <b>年糕</b> —— 黑猫，毒舌，偶尔物理出手。<br>
 <b>老板娘</b> —— 花店主人，口头禅"喜庆点"，爱茶如命。<br>
 <b>说书人</b> —— 讲故事的人。<br>
@@ -236,12 +236,12 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
-<p>女巫接了个活：给楼下花店做网站。</p>
-<p>一下午，她灵感爆棚，把首页改成了葬礼风——黑底，白字，正中一朵枯萎的玫瑰，凋零得很有艺术感。</p>
-<p>老板娘端着茶杯路过，瞥了一眼，茶差点洒了：“姑娘，我卖的是花，不是 sadness。”</p>
+<p>开业倒计时 11 天。女巫接了个活：给楼下花店「春日花开」做网站，开业那天必须上线。为什么接单？年糕太能吃了，魔法变不出猫粮。</p>
+<p>第一天下午，她灵感爆棚，把首页改成了葬礼风——黑底，白字，正中一朵枯萎的玫瑰，凋零得很有艺术感。</p>
+<p>老板娘端着茶杯路过，瞥了一眼，茶差点洒了："姑娘，我卖的是花，不是 sadness。喜庆点！"</p>
 <p>女巫僵住了。她想回到今天早上——那时候首页还是粉的，花还是开的，老板娘还是笑的。</p>
-<p>可没有时光机。她只能重做，一行一行往回改，改到半夜，边改边哭，哭到玫瑰都看不清了。
-<p>时光机，就是 Git——程序员给"后悔药"起的工程名。</p></p>
+<p>可没有时光机。她只能重做，一行一行往回改，改到半夜，边改边哭，哭到玫瑰都看不清了。</p>
+<p>时光机，就是 Git——程序员给"后悔药"起的工程名。今晚只记住一件事：<b>版本控制 = 给文件拍时间快照，改崩了，翻照片回去。</b></p>
 <aside class="example"><span class="t-label">我们的例子</span>你正在读的这篇教程，自己就是用 Git 写的：第一版用 11 个 commit 搭起，一夜一张快照。哪天我想翻出第一夜的初稿，<code>git log</code> 找到它，<code>checkout</code> 就行。版本控制不是大道理，是这篇教程的出生证明。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>说书人敲醒木：你们知道"git"这个词，本来是什么意思吗？英式俚语里，git 是"笨蛋、讨厌鬼"。发明者 Linus 自己说的："我是个自大狂，我用自己的名字命名所有项目。先是 Linux，现在是 git。"——他骂的是自己。时光机的学名，是发明者的自嘲。</aside>
 <div class="cast"><span class="t-label">故事角色对照表</span>十一夜所有比喻，一一对应 git 真东西，晕的时候回来查：<br>时光机 = Git 本体 · 拍照/按快门 = <code>git commit</code> · 照片 = 一个 commit（快照）<br>取景框 = 暂存区（staging area），<code>git add</code> = 把文件搬进取景框<br>相册目录 = <code>git log</code> 看到的历史 · 书签 HEAD = 你现在站在哪张照片上<br>平行宇宙 = 分支（branch）· 云端管理局 = GitHub · 魔法钥匙 = SSH key</div>
@@ -272,11 +272,12 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
+<p>开业倒计时 10 天。惨案之后，女巫听说有台时光机——装上它，改崩了一键回去。今晚三件事：<b>报上名，装机器，拍照两步走</b>。</p>
 <p>时光机开机，第一句："你谁？报上名来。"</p>
 <pre><code>git config --global user.name "女巫"
 git config --global user.email "witchj@example.com"</code></pre>
 <p>时光机每张照片都要署名。不署名的照片，它不存。认人，是时光机家族的规矩。</p>
-<p>然后，造机器：</p>
+<p>然后，安装时光机：</p>
 <pre><code>git init</code></pre>
 <p>你走进网站文件夹，运行 git init——等于在里面安装了一台时光机（它叫 .git，藏在文件夹里看不见）。文件夹本来就有，是你的；时光机是装进去的引擎。装完，这个文件夹就升级了，从此叫仓库。</p>
 <p>然后，拍照两步走。女巫问："为什么不能直接拍？非要先取景？"</p>
@@ -285,9 +286,10 @@ git config --global user.email "witchj@example.com"</code></pre>
 <pre><code>git add .</code></pre>
 <p><code>.</code> 的意思是：全都搬，一个不留。也可以只搬一件：<code>git add index.html</code>。</p>
 <p>第二步，按快门：</p>
-<pre><code>git commit -m "把首页改成葬礼风"</code></pre>
+<pre><code>git commit -m "把葬礼风改成喜庆粉"</code></pre>
 <p>女巫第一次按快门，忘了喊名字。时光机倒没骂她，"唰"地摊开一本小册子："现想也行，写这儿吧。"</p>
 <p>原来 <code>-m</code> 后面的，就是照片的名字。带上 <code>-m</code>，名字直接喊出来；不带，它就打开编辑器等你现写——反正不能没有名字。老手都带 <code>-m</code>，快，还不用等它翻册子。</p>
+<p>第一张快照入库。女巫长舒一口气，顺手把终端主题调成了暗黑——老板娘要喜庆，时光机里她说了算。</p>
 <aside class="example"><span class="t-label">我们的例子</span>第二夜写完，我是这么存的：<code>git add git-time-machine.md</code> 取景，再 <code>git commit -m "第二夜：开机三件事"</code> 按快门。<code>git log</code> 里多了一行，照片洗出来了，有名字，有署名。名字起得越清楚，未来的你越感谢现在的你。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>其实有个懒人咒：<code>git commit -a -m "名字"</code>，取景快门一步到位。但注意：<code>-a</code> 只管已经拍过照的老文件（已跟踪的），新文件还是得先 <code>add</code>，它不认生面孔。新手先练两步走，手感对了再偷懒。先学会走，再学飞。</aside>
 </div>
@@ -324,17 +326,17 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
-<p>照片存多了，得会翻。女巫学会三招。</p>
+<p>开业倒计时 9 天。照片存多了，得会翻。三招：<b><code>status</code> 看现状，<code>log</code> 翻过去，<code>diff</code> 找不同</b>。</p>
 <p>第一招，体检：</p>
 <pre><code>git status</code></pre>
 <p>时光机报告："三件衣服换了，还没拍照；两张照片已存档。"哪些改了没存，一目了然。这是女巫每天念得最多的一句咒，相当于进门先照镜子。</p>
 <p>第二招，翻目录：</p>
 <pre><code>git log --oneline</code></pre>
 <p>相册目录，一行一张照片。哪天拍的、叫什么，全在上面。<code>--oneline</code> 是"说人话版"，不加它，日志啰嗦得像老太太的裹脚布。</p>
+<p>女巫翻着翻着，僵住了。昨晚半夜，她把"喜庆粉"改成了"暗黑黑"，又改了回来——时光机如实记录，一点面子不给。更糟的是，log 里多了一条"年糕到此一游"：那猫半夜踩了键盘，还顺手按了快门。</p>
 <p>第三招，找不同：</p>
 <pre><code>git diff</code></pre>
 <p>跟玩"找不同"游戏一样。改了哪几个字，哪一行多了个逗号，全给你标出来。</p>
-<p>女巫翻开相册，沉默了。昨天一下午，她改的全是错别字。把"的"改成"得"，又改回来。时光机如实记录，一点面子不给。</p>
 <aside class="example"><span class="t-label">我们的例子</span>不信？这篇教程自己的相册，翻给你看：<pre><code>$ git log --pretty=format:"%s" --reverse
 第一夜：为什么需要时光机
 第二夜：开机三件事
@@ -380,14 +382,15 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
-<p>后悔药，今晚兑现。两种吃法。</p>
-<p>轻量版，只还一张照片：</p>
+<p>开业倒计时 8 天。改错了怎么办？后悔药两种吃法：<b>创可贴只还一个文件，核按钮整条时间线倒带——但后者回不来</b>。</p>
+<p>轻量版，创可贴：</p>
 <pre><code>git checkout -- index.html</code></pre>
 <p>这一个文件，回到照片里的样子。其他文件，不动。精准打击。注意 <code>--</code> 后面有个空格，别念错咒，念错不灵。</p>
-<p>重量版，整条时间线倒带：</p>
+<p>重量版，核按钮，整条时间线倒带：</p>
 <pre><code>git reset --hard HEAD~1</code></pre>
 <p><code>HEAD~1</code> 就是"书签往前挪一张"。回到上一个快照。按下去之前，时光机抖三抖，弹出红字："倒带之后回不来，你想好了吗？"</p>
-<p>女巫的手，悬在半空。</p>
+<p>女巫的手，悬在半空，抖。就在这时，年糕从桌角一跃而起，一爪子拍向红色按钮——"年糕！！！"爪子落在按钮边上，差一厘米。年糕淡定舔爪："急什么，我又不傻。"</p>
+<p>说书人擦汗：记住，核按钮连猫都不能碰。没 commit 的改动，一次清空真没了。</p>
 <aside class="example"><span class="t-label">我们的例子</span>假如我把第三夜例子的措辞改坏了，越改越别扭——创可贴上场：<code>git checkout -- git-time-machine.md</code>，这个文件的改动回到上次 commit 的样子，其他十夜毫发无伤。至于 <code>reset --hard</code>？第一版的 11 个 commit，我一个都不想丢，核按钮一次没碰过。创可贴常用，核按钮供着。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>reset 其实有三档：<code>--soft</code>、<code>--mixed</code>、<code>--hard</code>，一档比一档狠。记住最狠的那档叫 hard 就够了，其他的等你成了大女巫再说。</aside>
 </div>
@@ -423,13 +426,14 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
-<p>时光机的终极功能：开平行宇宙。分支，就是这么回事。</p>
+<p>开业倒计时 7 天。想试新风格又怕搞砸？<b>开个平行宇宙（branch），随便折腾，主宇宙毫发无伤</b>。</p>
 <pre><code>git branch night-mode</code></pre>
-<p>新宇宙诞生，名字叫 night-mode。主宇宙叫 main，原版在里面睡大觉，毫发无伤。</p>
+<p>新宇宙诞生，名字叫 night-mode。主宇宙叫 main，老板娘的喜庆粉在里面睡大觉，毫发无伤。</p>
 <pre><code>git switch night-mode</code></pre>
-<p>跳过去。在新宇宙里熬夜调样式，把配色调成"葬礼风2.0"。主宇宙的老板娘毫不知情，继续卖花。</p>
+<p>跳过去。在新宇宙里熬夜，把配色调成"葬礼风2.0"——黑眼圈是勋章。</p>
 <pre><code>git branch</code></pre>
 <p>不加名字，就是查户口：现在有几个宇宙，前面带 <code>*</code> 的是你正站的那个。</p>
+<p>对了，女巫还引入了一个开源花束组件"花开富贵"，展示用。就是有个小错别字，把"悬浮咒"写成了"悬浮猪"——先凑合用，开业前再说。</p>
 <aside class="example"><span class="t-label">我们的例子</span>假如写第五夜时，我想试试把“平行宇宙”改叫“大胆宇宙”，又怕改完后悔——开个分支：<code>git branch test-rename</code>，跳过去随便改。试完觉得还是“平行宇宙”好，分支一删，主宇宙干干净净。一张小纸条的成本，零心理负担。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>分支在时光机里只是一张小纸条（指针），几乎不占地方，开一万个宇宙也不心疼。所以大胆开，别省 —— 这句话值得再听一遍。</aside>
 </div>
@@ -465,21 +469,22 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
-<p>搬成果，叫合并。先回主宇宙：</p>
+<p>开业倒计时 6 天。分支上做完了，<b><code>merge</code> 搬回主宇宙；如果两边改了同一行，时光机举白旗，人来裁决</b>。</p>
+<p>先回主宇宙：</p>
 <pre><code>git switch main
 git merge night-mode</code></pre>
 <p>顺利的时候，无声无息，世界和平。新功能直接长在了主宇宙里。</p>
-<p>但如果两个宇宙改了<b>同一行</b>——主宇宙把按钮改成红色，night-mode 宇宙把同一行改成蓝色——时光机死机，举白旗："这段你自己定！我选不出来！"</p>
+<p>但这次，两个宇宙改了<b>同一行</b>——night-mode 宇宙把按钮改成暗黑黑，主宇宙按老板娘的要求改成了喜庆粉。时光机死机，举白旗："这段你自己定！我选不出来！"审美战争，终极对决。</p>
 <p>女巫打开文件，看见了打架现场：</p>
 <pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-&lt;button&gt;红色按钮&lt;/button&gt;
+&lt;button&gt;喜庆粉按钮&lt;/button&gt;
 =======
-&lt;button&gt;蓝色按钮&lt;/button&gt;
+&lt;button&gt;暗黑黑按钮&lt;/button&gt;
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; night-mode</code></pre>
-<p><code>=======</code> 上面是主宇宙的，下面是平行宇宙的。女巫亲手删掉不要的，留下要的，把那些 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> 符号清干净。再存一张快照：</p>
+<p><code>=======</code> 上面是主宇宙的，下面是平行宇宙的。老板娘端着茶杯路过，往桌上一放："粉的。"——客户一票否决，全票通过。女巫亲手留下粉色，把暗黑版存成纪念分支，删干净标记，再存一张快照：</p>
 <pre><code>git add .
-git commit -m "裁决：按钮用红色"</code></pre>
-<p>世界恢复和平。</p>
+git commit -m "裁决：按钮用喜庆粉，暗黑版留念"</code></pre>
+<p>世界恢复和平。葬礼风2.0 躺在分支里，像没寄出的情书。</p>
 <aside class="example"><span class="t-label">我们的例子</span>标准的 merge 长这样：分支上改了个错别字，主分支上同一段也动了句话，<code>git merge</code> 时举白旗。打开文件，<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> 上面是主宇宙，下面是分支，亲手二选一，删干净标记，<code>git add</code> + <code>git commit</code>，世界和平。裁决权在人，不在机器。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>快进合并时，时光机的内心独白："这点路，就不劳您费心了，我自己走过去。"——主宇宙没动过，它自己挪下书签就完事。</aside>
 </div>
@@ -523,6 +528,7 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
+<p>开业倒计时 5 天。本地时光机再好，老板娘看不见——<b><code>push</code> 推上云端（GitHub），<code>pull</code> 拉下来，<code>clone</code> 整台搬走</b>。</p>
 <p>GitHub，就是云端时间管理局。免费帮你存时间线，还能给朋友看。</p>
 <p>先登记地址：</p>
 <pre><code>git remote add origin &lt;仓库地址&gt;</code></pre>
@@ -532,10 +538,12 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <p>把主宇宙，推上云端。<code>-u</code> 是"记住这个地址"，下次只用喊 <code>git push</code>，它自己认路。</p>
 <p>女巫第一次 push，管理局："token 拿来。"女巫："token 藏哪了？"她翻遍备忘录，复制出一串乱码，手抖着粘进去——错了。又粘一次，又错，冷汗下来了。第三次，终于对了。</p>
 <p>——对，又是身份问题。GitHub 从 2021 年起就不认密码了，只认 token（个人访问令牌）。时光机家族都认人，只是现在认的是令牌。</p>
+<p>当晚，老板娘在手机上看到了进度，盯着屏幕看了很久："这个黑的……挺别致啊。"女巫差点把茶杯打翻——审美战争，出现松动。</p>
 <p>从云端下载别人的更新：</p>
 <pre><code>git pull</code></pre>
 <p>整台时光机复制一台，搬到新电脑：</p>
 <pre><code>git clone &lt;仓库地址&gt;</code></pre>
+<p>对了，管理局的吉祥物章鱼猫 Octocat 来串门，和年糕互相哈了三秒气，不分胜负。</p>
 <aside class="example"><span class="t-label">我们的例子</span>等这篇教程推上 GitHub，流程就是第七夜这套：本地写完 <code>git push</code>，云端多一个 commit；换台电脑，<code>git clone</code>，11 夜连历史一起搬走。<code>origin</code> 这个昵称，我也随大流——全世界都叫它“老家”，我不搞特殊。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>GitHub 的吉祥物是只章鱼猫，叫 Octocat。它的身世很草根：原型是英国设计师 Simon Oxley 挂在图库网站上卖的一张 stock 插画（名字就叫“Octopuss”），被 GitHub 创始人买下来做了 404 页面。为什么偏偏是章鱼？因为 git 里有个“octopus merge”（章鱼合并，一次合好几个分支）——章鱼猫就是这个梗的化身。“八只手同时干活”是后人附会的说法，可爱，但别当官方口径。</aside>
 </div>
@@ -572,7 +580,7 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
-<p>今夜没有女巫，只有你。</p>
+<p>开业倒计时 4 天。今晚毕业考：<b>从零走完 <code>init</code>→<code>push</code> 全流程，你的网站就有时光机了</b>。今夜没有女巫，只有你。</p>
 <p>1. 去 GitHub 建一个仓库，叫 joyce-way，公开。<br>2. 本地咒语：</p>
 <pre><code>git init
 git add .
@@ -583,7 +591,7 @@ git push -u origin main</code></pre>
 <p>从此，你的网站有了时光机。改崩不怕，平行宇宙随便开。</p>
 <p>说书人收起醒木："八夜讲完。女巫从见习女巫，变成了时间领主。"</p>
 <p>国王（你）："再讲一夜！"</p>
-<p>说书人："欲知后事如何，且看你的第一行 <code>git init</code>。"</p>
+<p>说书人："欲知后事如何，且看你的第一行 <code>git init</code>——女巫的 11 天走完了，你的第一天，开始了。"</p>
 <aside class="example"><span class="t-label">我们的例子</span>第八夜那条龙，这篇教程的本地部分就是这么游过来的：<code>git init</code> 建仓库 → <code>git add</code> 取景 → <code>git commit</code> 快门，一夜一游，游了 11 次。剩下的 <code>remote</code> + <code>push</code>，等发布那天，照着第八夜再游一次就行。</aside>
 </div>
 <div class="textbook">
@@ -623,21 +631,22 @@ git push -u origin main</code></pre>
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
-<p>女巫第一次 push，兴高采烈。结果第二天，管理局寄来警告信：</p>
+<p>开业倒计时 3 天。有些东西不许拍照：密码纸条，垃圾文件。<b><code>.gitignore</code> 是不许拍照名单；总输 token 烦？配把 SSH 魔法钥匙，一劳永逸</b>。</p>
+<p>女巫第二次 push，兴高采烈。结果第二天，管理局寄来警告信：</p>
 <p>"你上传了 3000 个文件。其中 2990 个是垃圾。另：你把密码纸条也传上来了，全世界都能看见。"</p>
-<p>女巫后背发凉。她的网站文件夹里躺着：<code>node_modules</code>（依赖大礼包，几千个文件）、<code>.DS_Store</code>（Mac 的小尾巴）、还有一张写着密码的小纸条 <code>.env</code>！</p>
+<p>女巫后背发凉——毕业考那天装的依赖大礼包 <code>node_modules</code>，几千个文件，全传上去了！还有 Mac 的小尾巴 <code>.DS_Store</code>，和一张写着密码的小纸条 <code>.env</code>！</p>
 <p>说书人摆摆手："别慌。时光机有个'不许拍照名单'，叫 <code>.gitignore</code>。名单上的东西，<code>git add .</code> 也搬不走。"</p>
 <p>女巫在仓库根目录建了个小本本，写下三行：</p>
 <pre><code>node_modules/
 .DS_Store
 .env</code></pre>
-<p>年糕凑过来："把我的毛也加上！我的毛不许拍！"女巫："你的毛已经满世界都是了，来不及了。"</p>
+<p>年糕凑过来："把我的毛也加上！我的毛不许拍！"女巫："你的毛已经满世界都是了，来不及了。"——上次核按钮没拍中，这次它要留名，没门。</p>
 <p>名单生效。再 <code>add</code> 再 <code>commit</code>，垃圾们原地消失，干干净净。</p>
-<p>搞定名单，新的烦恼来了：第一次 push，管理局要查身份证（输 token）。女巫嫌麻烦："老要报身份证，烦。"</p>
-<p>老女巫说："两条路。HTTPS 让系统的钥匙串记住 token，以后免查——这是管理局官方推荐的正道；或者配一把 SSH 魔法钥匙，一劳永逸。"</p>
+<p>搞定名单，新的烦恼来了：每次 push，管理局都要查身份证（输 token）。女巫想起那三遍冷汗："再也不想输第四次。"老女巫说："两条路。HTTPS 让系统的钥匙串记住 token，以后免查——这是管理局官方推荐的正道；或者配一把 SSH 魔法钥匙，一劳永逸。"</p>
 <p>女巫选了钥匙——她喜欢仪式感。</p>
 <pre><code>ssh-keygen -t ed25519 -C "witchj@example.com"</code></pre>
 <p>一把钥匙掰成两半：私藏的那半（私钥）谁也不给，交公的那半（公钥）贴到 GitHub 的 Settings → SSH keys。从此 push，碰一下就行。</p>
+<p>临睡前，女巫想把暗黑设计稿塞进名单藏起来，被说书人戳穿："名单是防垃圾的，不是藏私货的。"</p>
 <aside class="example"><span class="t-label">我们的例子</span>这篇教程的仓库根目录下，躺着一个 <code>.gitignore</code>。里面写着：半成品图（带 -labeled、-diagram 后缀的）不许入库，只有成品图（night-*-wide-v1.png）才配进仓库。名单在前，仓库才干净。发布那天，HTTPS 和 SSH 二选一：钥匙串记住 token，或者配一把 SSH 钥匙——手册推荐前者。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>真实事故类型：有人把云服务密钥传上公开 GitHub，被扫号机器人抓到盗刷，账单爆炸——这类事故在圈内隔段时间就来一出。现在 GitHub 有 secret scanning，抓到密钥会自动报警，但别指望它，先写好名单。</aside>
 <aside class="tiaowaihua"><span class="t-label">小挑战</span>给你的网站项目写一个 <code>.gitignore</code>，三行起。写完 <code>git status</code> 看一眼，垃圾还在不在。</aside>
@@ -675,12 +684,12 @@ git push -u origin main</code></pre>
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
-<p>女巫在管理局闲逛，发现一座"公共魔法塔"——开源的咒语大全，人人可用。但塔上有个错别字：把"悬浮咒"写成了"悬浮猪"。</p>
-<p>她挽起袖子想直接改，push 被拒："这不是你的宇宙！"（Permission denied）</p>
-<p>老女巫笑了："公共的塔，不能硬闯。正确的姿势叫 PR（Pull Request，请求合并）。五步走："</p>
+<p>开业倒计时 2 天。别人的仓库不能硬闯：<b>Fork 复制到你名下，改完发 PR（Pull Request，请求合并），等人家点头</b>。</p>
+<p>还记得"花开富贵"组件上那个"悬浮猪"吗？开业前，女巫决定把它修好。她挽起袖子想直接改，push 被拒："这不是你的宇宙！"（Permission denied）</p>
+<p>老女巫笑了："公共的塔，不能硬闯。正确的姿势叫 PR。五步走："</p>
 <p>1. <b>Fork</b>：在云端复制一座塔到你名下（点一下按钮就行）。<br>2. <b>Clone</b>：把你的塔下载到本地。<br>3. <b>开分支改</b>：<code>git switch -c fix-typo</code>，把"猪"改回"咒"。<br>4. <b>Push</b>：推回你自己的塔。<br>5. <b>发 PR</b>：点 "Compare &amp; pull request"，写句话："把猪改回咒，猪很无辜，但咒更重要。"</p>
 <p>塔主（仓库主人）看到了，提了个小意见："顺手把隔壁的'飘浮猪'也改了吧。"女巫改完再 push，PR 自动更新，不用重发。</p>
-<p>塔主点了 Merge。错别字消失。女巫的名字，出现在了贡献者名单里。</p>
+<p>塔主点了 Merge，还顺手把组件的默认主题改成了"暗夜"——原来开源世界，有人懂她。错别字消失。女巫的名字，出现在了贡献者名单里。</p>
 <aside class="example"><span class="t-label">我们的例子</span>这篇教程暂时还没开过 PR——它还在我手里长大。但流程已经想好了：发布之后，谁发现错别字，欢迎 Fork → 改 → 发 PR。"把猪改回咒"这种好事，在这篇教程里同样有效。开源的礼仪，从第一卷就开始。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>GitHub 有个"种田游戏"： contribution graph（贡献小绿格）。每天 commit 格子就绿一块，有人为了填满一年的绿格天天打卡 —— 程序员式的自律，可爱又心酸。</aside>
 <aside class="tiaowaihua"><span class="t-label">小挑战</span>去 GitHub 找一个你喜欢的开源项目，只看它的 PR 列表，读三个 PR 的标题和描述，感受"请求合并"的语气。</aside>
@@ -720,13 +729,17 @@ git push -u origin main</code></pre>
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
-<p>女巫的网站在时光机里躺了很久，只有她自己能看。她想让全世界看到。</p>
+<p>开业当天。网站躺在仓库里只有自己能看——<b>GitHub Pages 是免费展示橱窗，<code>push</code> 即发布</b>。</p>
 <p>管理局有个"展示橱窗"，叫 <b>GitHub Pages</b>。把网站放进橱窗，免费，全世界可看。</p>
 <p>步骤简单得像开灯：</p>
 <p>1. 打开仓库的 <b>Settings</b> → 左侧 <b>Pages</b>。<br>2. Source 选 <b>Deploy from a branch</b>，分支选 <b>main</b>。<br>3. 保存。等一分钟。</p>
 <p>网址诞生：<code>https://女巫.github.io/joyce-way/</code></p>
 <p>年糕第一个访问，在网站上踩出了一串梅花印 —— 第一个访客，是只猫。</p>
 <p>从此，每次 <code>git push</code>，橱窗自动更新。改完 push，一两分钟后，全世界看到新版。不用 FTP，不用服务器，不花一分钱。</p>
+<p>开业那天，"春日花开"第一单：隔壁咖啡店订了开业花篮。老板娘开香槟，茶终于没洒。她举杯："黑色系卖完了——暗黑系列，下次安排！"女巫的眼泪差点掉进香槟里：她输了现在，赢了未来。</p>
+<p>说书人合上书："十一天，十一夜。女巫的时光机，讲完了。"</p>
+<p>国王（你）："再讲一夜！"</p>
+<p>说书人笑："下一卷，是你的故事了。"</p>
 <aside class="example"><span class="t-label">我们的例子</span>第十一夜写完，这篇教程离"橱窗"只差三步：Settings → Pages → 选 main。发布那天 push 一下，一两分钟后全世界看到新版。到时候，第一个访客希望不是年糕——它只会踩梅花印，不会提 PR。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>你的 curtainraiser 学习站，就可以这样发布。无数开源项目的文档，都住在 Pages 的橱窗里 —— 免费、稳定、体面。</aside>
 </div>
