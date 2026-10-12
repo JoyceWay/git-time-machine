@@ -225,7 +225,8 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <p>一下午，她灵感爆棚，把首页改成了葬礼风——黑底，白字，正中一朵枯萎的玫瑰，凋零得很有艺术感。</p>
 <p>老板娘端着茶杯路过，瞥了一眼，茶差点洒了：“姑娘，我卖的是花，不是 sadness。”</p>
 <p>女巫僵住了。她想回到今天早上——那时候首页还是粉的，花还是开的，老板娘还是笑的。</p>
-<p>可没有时光机。她只能重做，一行一行往回改，改到半夜，边改边哭，哭到玫瑰都看不清了。</p>
+<p>可没有时光机。她只能重做，一行一行往回改，改到半夜，边改边哭，哭到玫瑰都看不清了。
+<p>时光机，就是 Git——程序员给"后悔药"起的工程名。</p></p>
 <aside class="example"><span class="t-label">我们的例子</span>你正在读的这篇教程，自己就是用 Git 写的：第一版用 11 个 commit 搭起，一夜一张快照。哪天我想翻出第一夜的初稿，<code>git log</code> 找到它，<code>checkout</code> 就行。版本控制不是大道理，是这篇教程的出生证明。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>说书人敲醒木：你们知道"git"这个词，本来是什么意思吗？英式俚语里，git 是"笨蛋、讨厌鬼"。发明者 Linus 自己说的："我是个自大狂，我用自己的名字命名所有项目。先是 Linux，现在是 git。"——他骂的是自己。时光机的学名，是发明者的自嘲。</aside>
 <div class="cast"><span class="t-label">故事角色对照表</span>十一夜所有比喻，一一对应 git 真东西，晕的时候回来查：<br>时光机 = Git 本体 · 拍照/按快门 = <code>git commit</code> · 照片 = 一个 commit（快照）<br>取景框 = 暂存区（staging area），<code>git add</code> = 把文件搬进取景框<br>相册目录 = <code>git log</code> 看到的历史 · 书签 HEAD = 你现在站在哪张照片上<br>平行宇宙 = 分支（branch）· 云端管理局 = GitHub · 魔法钥匙 = SSH key</div>
@@ -264,7 +265,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <pre><code>git init</code></pre>
 <p>你走进网站文件夹，运行 git init——等于在里面安装了一台时光机（它叫 .git，藏在文件夹里看不见）。文件夹本来就有，是你的；时光机是装进去的引擎。装完，这个文件夹就升级了，从此叫仓库。</p>
 <p>然后，拍照两步走。女巫问："为什么不能直接拍？非要先取景？"</p>
-<p>说书人笑了："因为你可以只拍三件衣服中的两件。取景框，就是让你决定——这次存什么。"</p>
+<p>说书人笑了："因为你可以只拍三件衣服中的两件。取景框，在 Git 里叫暂存区（staging area）——就是让你决定，这次存什么。"</p>
 <p>第一步，取景。把改过的文件，搬进取景框：</p>
 <pre><code>git add .</code></pre>
 <p><code>.</code> 的意思是：全都搬，一个不留。也可以只搬一件：<code>git add index.html</code>。</p>
