@@ -30,7 +30,7 @@ padding:0 0 120px;
 .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
 header.hero{padding:88px 20px 30px;text-align:center}
 header.hero .kicker{font-family:"ZCOOL KuaiLe",sans-serif !important;font-size:17px;letter-spacing:.3em}
-header.hero h1{font-family:"ZCOOL KuaiLe",sans-serif;color:#4d4361;font-size:clamp(44px,7vw,72px);letter-spacing:.08em;margin:10px 0 16px}
+header.hero h1{font-family:"ZCOOL KuaiLe",sans-serif;color:#4d4361;font-size:clamp(30px,4.6vw,46px);letter-spacing:.06em;margin:0 0 14px}
 header.hero .sub{font-size:16px;color:#8b877d;letter-spacing:.12em;margin-bottom:30px}
 .start-btn{display:inline-block;font-family:"ZCOOL KuaiLe",sans-serif;font-size:19px;letter-spacing:.2em;color:#fff;background:#4d4361;border-radius:999px;padding:14px 44px 14px 52px;text-decoration:none;box-shadow:0 8px 24px rgba(77,67,97,.30)}
 .start-btn:hover{background:#3a2f52}
@@ -40,7 +40,7 @@ display:inline-block;font-size:13px;letter-spacing:.45em;color:var(--gold);
 border:1px solid var(--gold);border-radius:999px;padding:6px 18px 6px 24px;margin-bottom:26px;
 font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
 }
-header.hero h1{font-size:clamp(30px,4.6vw,46px);letter-spacing:.06em;margin-bottom:14px}
+
 header.hero.sub{color:var(--ink-soft);font-size:16px;letter-spacing:.12em}
 .guide{
 margin:34px auto 10px;max-width:760px;text-align:center;color:var(--ink-soft);font-size:14.5px;
@@ -65,7 +65,7 @@ border:1px solid var(--line);border-radius:14px;
 .prologue p{margin-bottom:1em}
 .prologue p:last-child{margin-bottom:0}
 section.night{margin:70px 0 0}
-.night-head{display:flex;align-items:baseline;gap:16px;margin-bottom:22px}
+.night-head{display:flex;align-items:center;gap:12px;margin-bottom:22px;flex-wrap:wrap}
 .night-no{
 font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
 font-size:13px;letter-spacing:.3em;color:#fff;background:var(--gold);
@@ -150,7 +150,7 @@ aside.example .t-label{color:#6f6a5e}
 .resume-bar .close{margin-left:12px;cursor:pointer;opacity:.6}
 .vol-label{font-family:"ZCOOL KuaiLe",sans-serif;font-size:15px;color:#b08d3e;letter-spacing:.2em;margin:0 6px;align-self:center}
 nav.nights{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center}
-.countdown{display:inline-block;font-size:12px;padding:4px 14px;border-radius:12px;background:#4d4361;color:#fff;letter-spacing:.12em;margin-left:10px;vertical-align:middle}
+.countdown{display:inline-block;font-size:12px;padding:4px 14px;border-radius:12px;background:#4d4361;color:#fff;letter-spacing:.12em;margin-left:10px;vertical-align:middle;white-space:nowrap;flex-shrink:0}
 .read-time{font-size:12.5px;color:#a09a8c;letter-spacing:.1em;margin-left:10px;white-space:nowrap}
 .night-head{display:flex;align-items:baseline}
 .cast{margin:18px 0 4px;padding:14px 18px;border:1px dashed #b39ddb;background:#faf8ff;border-radius:10px;font-size:14.5px;color:#3a3350;line-height:2}
@@ -162,7 +162,7 @@ nav.nights{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-item
 .g-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
 .g-item{font-size:14.5px;line-height:1.7;color:#3e372f;border-bottom:1px dashed #e2dccb;padding-bottom:8px}
 .g-item b{color:#2b2620}
-@media(max-width:640px){.g-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.g-grid{grid-template-columns:1fr}.night-head h2{font-size:22px}.night-head{gap:10px}}
 .part-div{max-width:760px;margin:80px auto 0;text-align:center}
 .prologue{max-width:640px;margin:26px auto 0;text-align:center}
 .pro-frame{font-size:16px;color:#4d4361;line-height:2;margin-bottom:20px}
@@ -193,18 +193,12 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <header class="hero">
 <div class="kicker">一 千 零 一 夜 体</div>
 <h1>女巫的时光机</h1>
-<div class="sub">新手 Git 上手记 · 全十一夜 · 两个卷</div>
+<div class="sub">新手 Git 上手记 · 全十一夜 · 两卷</div>
 <a class="start-btn" href="#n1">开 始 第 一 夜</a>
 <div class="cover-rule"></div>
 <section class="prologue">
-<p class="pro-frame">像山鲁佐德那样，说书人要用<strong>十一个夜晚</strong>，给你讲完女巫的故事——<br>每晚都在天亮前，停在最要紧的地方。</p>
-<div class="dramatis"><span class="t-label">人物介绍</span><br>
-<b>女巫</b> —— 见习女巫，暗黑美学重度患者。接了楼下花店「春日花开」网店的单子，开业倒计时 11 天。接单原因：年糕太能吃，猫粮钱告急。<br>
-<b>年糕</b> —— 黑猫，毒舌，偶尔物理出手。<br>
-<b>老板娘</b> —— 花店主人，口头禅"喜庆点"，爱茶如命。<br>
-<b>说书人</b> —— 讲故事的人。<br>
-<b>国王</b> —— 你。负责说"再讲一夜！"。</div>
-<p class="pro-go">第一夜，天黑了。接单第一天，女巫就把网站改崩了——</p>
+<p class="pro-frame">像山鲁佐德那样，说书人要用<strong>十一个夜晚</strong>，讲完女巫和她的时光机的故事——<br>每晚都在天亮前，停在最要紧的地方。国王——就是你——想听下一夜，得说"再讲一夜！"</p>
+<p class="pro-go">第一夜，天黑了。女巫的第一单，开张就改崩了——</p>
 </section>
 </header>
 
@@ -214,14 +208,6 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <span class="vol-label">第一卷</span><a href="#n1">第一夜</a><a href="#n2">第二夜</a><a href="#n3">第三夜</a><a href="#n4">第四夜</a><a href="#n5">第五夜</a><a href="#n6">第六夜</a>
 <span class="vol-label">第二卷</span><a href="#n7">第七夜</a><a href="#n8">第八夜</a><a href="#n9">第九夜</a><a href="#n10">第十夜</a><a href="#n11">第十一夜</a>
 </nav>
-
-<div class="prologue">
-<p>从前，有个见习女巫，名叫女巫，学做网站。</p>
-<p>她的电脑里有一个文件夹，叫"网站最终版"。还有"网站最终版2"。"网站最终版真的最终"。以及"网站最终版真的最终再也不改了"。</p>
-<p>有一天，她改崩了。想回到今天早上。回不去。</p>
-<p>她哭了。然后她在旧货市场，淘到了一台二手时光机。附说明书。</p>
-<p>这十一夜，说书人讲的，就是这台时光机的故事。时光机的学名，叫 Git。</p>
-</div>
 
 <div class="chapter-div">
 <div class="chapter-kicker">第 一 卷</div>
@@ -237,10 +223,10 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <div class="night-body">
 <div class="story">
 <span class="t-label story-label">故事线</span>
-<p>开业倒计时 11 天。女巫接了个活：给楼下花店「春日花开」做网站，开业那天必须上线。为什么接单？年糕太能吃了，魔法变不出猫粮。</p>
+<p>开业倒计时 11 天。</p><p>"姑娘，会做网站吗？"楼下「春日花开」花店的老板娘端着茶杯，站在阁楼门口，"十一天后开业，网站还没影呢。"</p><p>这是女巫出师前自己接的第一单。墙角，年糕把脸埋进第三盆猫粮，头也不抬。</p><p>"接。"</p>
 <p>第一天下午，她灵感爆棚，把首页改成了葬礼风——黑底，白字，正中一朵枯萎的玫瑰，凋零得很有艺术感。</p>
 <p>老板娘端着茶杯路过，瞥了一眼，茶差点洒了："姑娘，我卖的是花，不是 sadness。喜庆点！"</p>
-<p>女巫僵住了。她想回到今天早上——那时候首页还是粉的，花还是开的，老板娘还是笑的。</p>
+<p>女巫僵住了。她想回到今天早上——那时候首页还是粉的，花还是开的，老板娘还是笑的。<br>其实店里本来就有黑玫瑰，卖得还不错。老板娘气的不是黑，是丧——首页得像花店，不能像葬礼。</p>
 <p>可没有时光机。她只能重做，一行一行往回改，改到半夜，边改边哭，哭到玫瑰都看不清了。</p>
 <p>时光机，就是 Git——程序员给"后悔药"起的工程名。今晚只记住一件事：<b>版本控制 = 给文件拍时间快照，改崩了，翻照片回去。</b></p>
 <aside class="example"><span class="t-label">我们的例子</span>你正在读的这篇教程，自己就是用 Git 写的：第一版用 11 个 commit 搭起，一夜一张快照。哪天我想翻出第一夜的初稿，<code>git log</code> 找到它，<code>checkout</code> 就行。版本控制不是大道理，是这篇教程的出生证明。</aside>
@@ -276,7 +262,7 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <p>开业倒计时 10 天。惨案之后，女巫听说有台时光机——装上它，改崩了一键回去。今晚三件事：<b>报上名，装机器，拍照两步走</b>。</p>
 <p>时光机开机，第一句："你谁？报上名来。"</p>
 <pre><code>git config --global user.name "女巫"
-git config --global user.email "witchj@example.com"</code></pre>
+git config --global user.email "witch@example.com"</code></pre>
 <p>时光机每张照片都要署名。不署名的照片，它不存。认人，是时光机家族的规矩。</p>
 <p>然后，安装时光机：</p>
 <pre><code>git init</code></pre>
@@ -389,7 +375,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <p>这一个文件，回到照片里的样子。其他文件，不动。精准打击。注意 <code>--</code> 后面有个空格，别念错咒，念错不灵。</p>
 <p>重量版，核按钮，整条时间线倒带：</p>
 <pre><code>git reset --hard HEAD~1</code></pre>
-<p><code>HEAD~1</code> 就是"书签往前挪一张"。回到上一个快照。按下去之前，时光机抖三抖，弹出红字："倒带之后回不来，你想好了吗？"</p>
+<p><code>HEAD~1</code> 就是"书签往前挪一张"。回到上一个快照。按下去之前，时光机抖三抖，弹出红字："没拍过照的改动，倒带就真没了，你想好了吗？"</p>
 <p>女巫的手，悬在半空，抖。就在这时，年糕从桌角一跃而起，一爪子拍向红色按钮——"年糕！！！"爪子落在按钮边上，差一厘米。年糕淡定舔爪："急什么，我又不傻。"</p>
 <p>说书人擦汗：记住，核按钮连猫都不能碰。没 commit 的改动，一次清空真没了。</p>
 <aside class="example"><span class="t-label">我们的例子</span>假如我把第三夜例子的措辞改坏了，越改越别扭——创可贴上场：<code>git checkout -- git-time-machine.md</code>，这个文件的改动回到上次 commit 的样子，其他十夜毫发无伤。至于 <code>reset --hard</code>？第一版的 11 个 commit，我一个都不想丢，核按钮一次没碰过。创可贴常用，核按钮供着。</aside>
@@ -515,14 +501,14 @@ git commit -m "裁决：按钮用喜庆粉，暗黑版留念"</code></pre>
 <div class="hook"><b>欲知后事如何：</b>女巫想把网站给另一个城市的朋友看。时光机再大，也飞不过去……</div>
 </section>
 
+<!-- 第七夜 -->
 <div class="chapter-div">
 <div class="chapter-kicker">第 二 卷</div>
-<div class="chapter-title">云端邮局与魔法钥匙</div>
-<div class="chapter-sub">GitHub 远程协作 · 推送 / 拉取 / Fork / PR / 发布</div>
+<div class="chapter-title">GitHub 篇</div>
+<div class="chapter-sub">GitHub 操作 · 远程 / 推送 / 拉取 / 协作 / 发布</div>
 <div><span class="chapter-range">第 七 夜 → 第 十 一 夜</span></div>
 </div>
 
-<!-- 第七夜 -->
 <section class="night" id="n7">
 <div class="night-head"><span class="night-no">第七夜</span><h2>云端时间管理局</h2><span class="countdown">开业倒计时 5 天</span></div>
 <figure class="night-fig"><a href="img/night-07-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-07-wide-v1.png" alt="第七夜插图"></a></figure>
@@ -584,15 +570,16 @@ git commit -m "裁决：按钮用喜庆粉，暗黑版留念"</code></pre>
 <p>开业倒计时 4 天。今晚毕业考：<b>从零走完 <code>init</code>→<code>push</code> 全流程，你的网站就有时光机了</b>。今夜没有女巫，只有你。</p>
 <p>1. 去 GitHub 建一个仓库，叫 joyce-way，公开。<br>2. 本地咒语：</p>
 <pre><code>git init
+git branch -M main
 git add .
 git commit -m "我的第一张快照"
 git remote add origin &lt;你的仓库地址&gt;
 git push -u origin main</code></pre>
-<p>（自我介绍那两行，前面已经念过了，这里不数。）</p>
-<p>从此，你的网站有了时光机。改崩不怕，平行宇宙随便开。女巫还顺手装了依赖大礼包 <code>node_modules</code>——几千个文件，没放在心上。</p>
-<p>说书人收起醒木："八夜讲完。女巫从见习女巫，变成了时间领主。"</p>
+<p>（自我介绍那两行，前面已经念过了，这里不数。第二行是给主宇宙上户口：有些时光机默认不叫 main，先改名，省得 push 时找不到北。）</p>
+<p>从此，你的网站有了时光机。改崩不怕，平行宇宙随便开。你大概还会装上依赖大礼包 <code>node_modules</code>——几千个文件，先别放在心上，第九夜它会惹祸。</p>
+<p>说书人收起醒木："八夜讲完。考试通过——女巫从见习女巫，变成了时间领主。"</p>
 <p>国王（你）："再讲一夜！"</p>
-<p>说书人："欲知后事如何，且看你的第一行 <code>git init</code>——女巫的 11 天走完了，你的第一天，开始了。"</p>
+<p>说书人："别急。考试是考试，开业是开业。剩下三天，真刀真枪——且看时间领主的第一场实战。"</p>
 <aside class="example"><span class="t-label">我们的例子</span>第八夜那条龙，这篇教程的本地部分就是这么游过来的：<code>git init</code> 建仓库 → <code>git add</code> 取景 → <code>git commit</code> 快门，一夜一游，游了 11 次。剩下的 <code>remote</code> + <code>push</code>，等发布那天，照着第八夜再游一次就行。</aside>
 </div>
 <div class="textbook">
@@ -620,11 +607,6 @@ git push -u origin main</code></pre>
 <p class="q">你的第一台时光机，准备先存什么？</p>
 </div>
 
-<div class="part-div" id="github-part">
-<h2>GitHub 篇</h2>
-<p>第九夜 — 第十一夜 · 云端时间管理局的故事</p>
-</div>
-
 <!-- 第九夜 -->
 <section class="night" id="n9">
 <div class="night-head"><span class="night-no">第九夜</span><h2>不许拍照名单，与魔法钥匙</h2><span class="countdown">开业倒计时 3 天</span></div>
@@ -635,20 +617,22 @@ git push -u origin main</code></pre>
 <p>开业倒计时 3 天。有些东西不许拍照：密码纸条，垃圾文件。<b><code>.gitignore</code> 是不许拍照名单；总输 token 烦？配把 SSH 魔法钥匙，一劳永逸</b>。</p>
 <p>女巫第二次 push，兴高采烈。结果第二天，管理局寄来警告信：</p>
 <p>"你上传了 3000 个文件。其中 2990 个是垃圾。另：你把密码纸条也传上来了，全世界都能看见。"</p>
+<p>（第八夜你装的那个大礼包？同一封信，已经在路上了。）</p>
 <p>女巫后背发凉——毕业考那天装的依赖大礼包 <code>node_modules</code>，几千个文件，全传上去了！还有 Mac 的小尾巴 <code>.DS_Store</code>，和一张写着密码的小纸条 <code>.env</code>！</p>
-<p>说书人摆摆手："别慌。时光机有个'不许拍照名单'，叫 <code>.gitignore</code>。名单上的东西，<code>git add .</code> 也搬不走。"</p>
+<p>说书人摆摆手："别慌。时光机有个'不许拍照名单'，叫 <code>.gitignore</code>。名单上的东西，以后 <code>git add .</code> 都搬不走——注意，是'以后'。已经入库的，名单管不着。"</p>
 <p>女巫在仓库根目录建了个小本本，写下三行：</p>
 <pre><code>node_modules/
 .DS_Store
 .env</code></pre>
 <p>年糕凑过来："把我的毛也加上！我的毛不许拍！"女巫："你的毛已经满世界都是了，来不及了。"——上次核按钮没拍中，这次它要留名，没门。</p>
-<p>名单生效。再 <code>add</code> 再 <code>commit</code>，垃圾们原地消失，干干净净。</p>
-<p>搞定名单，新的烦恼来了：每次 push，管理局都要查身份证（输 token）。女巫想起那三遍冷汗："再也不想输第四次。"老女巫说："两条路。HTTPS 让系统的钥匙串记住 token，以后免查——这是管理局官方推荐的正道；或者配一把 SSH 魔法钥匙，一劳永逸。"</p>
+<p>已经传上去的那 3000 个，得办出库手续：<code>git rm -r --cached node_modules</code>（出库不删文件，只把它们请出时间线，剩下两个同理）。再 commit 一次，云端就清静了。</p>
+<p>"还有那张密码纸条，"说书人脸色一正，"名单拦不住已经公开的东西——密码，立刻换。这是铁律。</p>
+<p>搞定名单，新的烦恼来了：每次 push，管理局都要查身份证（输 token）。女巫想起那三遍冷汗："再也不想输第四次。"说书人说："两条路。HTTPS 是管理局默认推荐的，开箱即用，配个钥匙串记住 token，以后免查；或者配一把 SSH 魔法钥匙，一劳永逸。"</p>
 <p>女巫选了钥匙——她喜欢仪式感。</p>
-<pre><code>ssh-keygen -t ed25519 -C "witchj@example.com"</code></pre>
+<pre><code>ssh-keygen -t ed25519 -C "witch@example.com"</code></pre>
 <p>一把钥匙掰成两半：私藏的那半（私钥）谁也不给，交公的那半（公钥）贴到 GitHub 的 Settings → SSH keys。从此 push，碰一下就行。</p>
 <p>临睡前，女巫想把暗黑设计稿塞进名单藏起来，被说书人戳穿："名单是防垃圾的，不是藏私货的。"</p>
-<aside class="example"><span class="t-label">我们的例子</span>这篇教程的仓库根目录下，躺着一个 <code>.gitignore</code>。里面写着：半成品图（带 -labeled、-diagram 后缀的）不许入库，只有成品图（night-*-wide-v1.png）才配进仓库。名单在前，仓库才干净。发布那天，HTTPS 和 SSH 二选一：钥匙串记住 token，或者配一把 SSH 钥匙——手册推荐前者。</aside>
+<aside class="example"><span class="t-label">我们的例子</span>这篇教程的仓库根目录下，躺着一个 <code>.gitignore</code>。里面写着：半成品图（带 -labeled、-diagram 后缀的）不许入库，只有成品图（night-*-wide-v1.png）才配进仓库。名单在前，仓库才干净。发布那天，HTTPS 和 SSH 二选一：钥匙串记住 token，或者配一把 SSH 钥匙。两条都是正道，我选了后者——仪式感。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>真实事故类型：有人把云服务密钥传上公开 GitHub，被扫号机器人抓到盗刷，账单爆炸——这类事故在圈内隔段时间就来一出。现在 GitHub 有 secret scanning，抓到密钥会自动报警，但别指望它，先写好名单。</aside>
 <aside class="tiaowaihua"><span class="t-label">小挑战</span>给你的网站项目写一个 <code>.gitignore</code>，三行起。写完 <code>git status</code> 看一眼，垃圾还在不在。</aside>
 </div>
@@ -687,7 +671,7 @@ git push -u origin main</code></pre>
 <span class="t-label story-label">故事线</span>
 <p>开业倒计时 2 天。别人的仓库不能硬闯：<b>Fork 复制到你名下，改完发 PR（Pull Request，请求合并），等人家点头</b>。</p>
 <p>还记得"花开富贵"组件上那个"悬浮猪"吗？开业前，女巫决定把它修好。她挽起袖子想直接改，push 被拒："这不是你的宇宙！"（Permission denied）</p>
-<p>老女巫笑了："公共的塔，不能硬闯。正确的姿势叫 PR。五步走："</p>
+<p>说书人笑了："公共的塔，不能硬闯。正确的姿势叫 PR。五步走："</p>
 <p>1. <b>Fork</b>：在云端复制一座塔到你名下（点一下按钮就行）。<br>2. <b>Clone</b>：把你的塔下载到本地。<br>3. <b>开分支改</b>：<code>git switch -c fix-typo</code>，把"猪"改回"咒"。<br>4. <b>Push</b>：推回你自己的塔。<br>5. <b>发 PR</b>：点 "Compare &amp; pull request"，写句话："把猪改回咒，猪很无辜，但咒更重要。"</p>
 <p>塔主（仓库主人）看到了，提了个小意见："顺手把隔壁的'飘浮猪'也改了吧。"女巫改完再 push，PR 自动更新，不用重发。</p>
 <p>塔主点了 Merge，还顺手把组件的默认主题改成了"暗夜"——原来开源世界，有人懂她。错别字消失。女巫的名字，出现在了贡献者名单里。</p>
@@ -733,8 +717,8 @@ git push -u origin main</code></pre>
 <p>开业当天。网站躺在仓库里只有自己能看——<b>GitHub Pages 是免费展示橱窗，<code>push</code> 即发布</b>。</p>
 <p>管理局有个"展示橱窗"，叫 <b>GitHub Pages</b>。把网站放进橱窗，免费，全世界可看。</p>
 <p>步骤简单得像开灯：</p>
-<p>1. 打开仓库的 <b>Settings</b> → 左侧 <b>Pages</b>。<br>2. Source 选 <b>Deploy from a branch</b>，分支选 <b>main</b>。<br>3. 保存。等一分钟。</p>
-<p>网址诞生：<code>https://女巫.github.io/joyce-way/</code></p>
+<p>1. 打开仓库的 <b>Settings</b> → 左侧 <b>Pages</b>。<br>2. Source 选 <b>Deploy from a branch</b>，分支选 <b>main</b>。<br>3. 保存。等几分钟。</p>
+<p>网址诞生：<code>https://witch.github.io/joyce-way/</code></p>
 <p>年糕第一个访问，在网站上踩出了一串梅花印 —— 第一个访客，是只猫。</p>
 <p>从此，每次 <code>git push</code>，橱窗自动更新。改完 push，一两分钟后，全世界看到新版。不用 FTP，不用服务器，不花一分钱。</p>
 <p>开业那天，"春日花开"第一单：隔壁咖啡店订了开业花篮。老板娘开香槟，茶终于没洒。她举杯："黑色系卖完了——暗黑系列，下次安排！"女巫的眼泪差点掉进香槟里：她输了现在，赢了未来。</p>
