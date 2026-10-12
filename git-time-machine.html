@@ -276,7 +276,7 @@ git config --global user.email "witch@example.com"</code></pre>
 <p>第二步，按快门：</p>
 <pre><code>git commit -m "把葬礼风改成喜庆粉"</code></pre>
 <p>女巫第一次按快门，忘了喊名字。时光机倒没骂她，"唰"地摊开一本小册子："现想也行，写这儿吧。"</p>
-<p>原来 <code>-m</code> 后面的，就是照片的名字。带上 <code>-m</code>，名字直接喊出来；不带，它就打开编辑器等你现写——反正不能没有名字。老手都带 <code>-m</code>，快，还不用等它翻册子。</p>
+<p>原来 <code>-m</code> 后面的，就是照片的名字。带上 <code>-m</code>，名字直接喊出来；不带，它就打开编辑器等你现写。老手都带 <code>-m</code>，快，还不用等它翻册子。</p>
 <p>第一张快照入库。女巫长舒一口气，顺手把终端主题调成了暗黑——老板娘要喜庆，时光机里她说了算。</p>
 <aside class="example"><span class="t-label">我们的例子</span>第二夜写完，我是这么存的：<code>git add git-time-machine.md</code> 取景，再 <code>git commit -m "第二夜：开机三件事"</code> 按快门。<code>git log</code> 里多了一行，照片洗出来了，有名字，有署名。名字起得越清楚，未来的你越感谢现在的你。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>其实有个懒人咒：<code>git commit -a -m "名字"</code>，取景快门一步到位。但注意：<code>-a</code> 只管已经拍过照的老文件（已跟踪的），新文件还是得先 <code>add</code>，它不认生面孔。新手先练两步走，手感对了再偷懒。先学会走，再学飞。</aside>
@@ -627,7 +627,7 @@ git push -u origin main</code></pre>
 .env</code></pre>
 <p>年糕凑过来："把我的毛也加上！我的毛不许拍！"女巫："你的毛已经满世界都是了，来不及了。"——上次核按钮没拍中，这次它要留名，没门。</p>
 <p>已经传上去的那 3000 个，得办出库手续：<code>git rm -r --cached node_modules</code>（出库不删文件，只把它们请出时间线，剩下两个同理）。再 commit 一次，云端就清静了。</p>
-<p>"还有那张密码纸条，"说书人脸色一正，"名单拦不住已经公开的东西——密码，立刻换。这是铁律。</p>
+<p>"还有那张密码纸条，"说书人脸色一正，"已经公开的，名单拦不住——密码，立刻换。这是铁律。</p>
 <p>搞定名单，新的烦恼来了：每次 push，管理局都要查身份证（输 token）。女巫想起那三遍冷汗："再也不想输第四次。"说书人说："两条路。HTTPS 是管理局默认推荐的，开箱即用，配个钥匙串记住 token，以后免查；或者配一把 SSH 魔法钥匙，一劳永逸。"</p>
 <p>女巫选了钥匙——她喜欢仪式感。</p>
 <pre><code>ssh-keygen -t ed25519 -C "witch@example.com"</code></pre>
