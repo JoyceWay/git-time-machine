@@ -152,7 +152,8 @@ aside.example .t-label{color:#6f6a5e}
 nav.nights{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center}
 .read-time{font-size:12.5px;color:#a09a8c;letter-spacing:.1em;margin-left:10px;white-space:nowrap}
 .night-head{display:flex;align-items:baseline}
-.try{grid-column:1/-1;margin:4px 0 22px;padding:14px 18px;border-left:3px solid #4d4361;background:#f1edf7;border-radius:0 10px 10px 0;font-size:14.5px;color:#3a3350}
+.cast{margin:18px 0 4px;padding:14px 18px;border:1px dashed #b39ddb;background:#faf8ff;border-radius:10px;font-size:14.5px;color:#3a3350;line-height:2}
+.try{margin:20px 0 6px;padding:14px 18px;border-left:3px solid #4d4361;background:#f1edf7;border-radius:0 10px 10px 0;font-size:14.5px;color:#3a3350}
 .try .t-label{color:#4d4361}
 .glossary{max-width:760px;margin:70px auto 0}
 .glossary h2{font-family:"ZCOOL KuaiLe",sans-serif;font-size:26px;color:#4d4361;text-align:center;margin-bottom:8px}
@@ -218,8 +219,6 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <div class="night-head"><span class="night-no">第一夜</span><h2>为什么需要时光机</h2></div>
 <figure class="night-fig"><a href="img/night-01-wide-v3.png" target="_blank" rel="noopener"><img src="img/night-01-wide-v3.png" alt="第一夜插图"></a></figure>
 <div class="night-body">
-<aside class="try"><span class="t-label">你试试</span>在电脑上建个文件夹，塞三个"网站最终版2""真的最终版"式的文件名——先体会一下没有版本控制的痛，再往下学。</aside>
-
 <div class="story">
 <span class="t-label story-label">故事线</span>
 <p>女巫接了个活：给楼下花店做网站。</p>
@@ -229,13 +228,14 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <p>可没有时光机。她只能重做，一行一行往回改，改到半夜，边改边哭，哭到玫瑰都看不清了。</p>
 <aside class="example"><span class="t-label">我们的例子</span>你正在读的这篇教程，自己就是用 Git 写的：第一版用 11 个 commit 搭起，一夜一张快照。哪天我想翻出第一夜的初稿，<code>git log</code> 找到它，<code>checkout</code> 就行。版本控制不是大道理，是这篇教程的出生证明。</aside>
 <aside class="tiaowaihua"><span class="t-label">女巫的悄悄话</span>说书人敲醒木：你们知道"git"这个词，本来是什么意思吗？英式俚语里，git 是"笨蛋、讨厌鬼"。发明者 Linus 自己说的："我是个自大狂，我用自己的名字命名所有项目。先是 Linux，现在是 git。"——他骂的是自己。时光机的学名，是发明者的自嘲。</aside>
+<div class="cast"><span class="t-label">故事角色对照表</span>十一夜所有比喻，一一对应 git 真东西，晕的时候回来查：<br>时光机 = Git 本体 · 拍照/按快门 = <code>git commit</code> · 照片 = 一个 commit（快照）<br>取景框 = 暂存区（staging area），<code>git add</code> = 把文件搬进取景框<br>相册目录 = <code>git log</code> 看到的历史 · 书签 HEAD = 你现在站在哪张照片上<br>平行宇宙 = 分支（branch）· 云端管理局 = GitHub · 魔法钥匙 = SSH key</div>
 </div>
 <div class="textbook">
 <div class="tb-label">📦 教科书 · 第一夜</div>
 <dl>
 <dt>版本控制（version control）</dt>
 <dd>记录文件每一次变化的系统。每次记录叫一个<b>版本（version）</b>，随时可以回到任意一个版本。</dd>
-<div class="tb-note">✎ 补：快照不占地方——Git 存的是"和上一张的差别"，不是整个文件夹复制一份。</div>
+<div class="tb-note">✎ 补：快照不占地方——Git 存的是每次的完整快照，但内容相同的文件只存一份，打包时还会再压缩。</div>
 <div class="tb-note">✎ 记：关键词两个——“记住每一次变化”“随时回去”。</div>
 <dt>为什么需要</dt>
 <dd>人会改错、会后悔、会想试新想法又怕弄坏旧的。版本控制就是"后悔药"的工程实现。</dd>
@@ -244,6 +244,8 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <div class="one-line">一句话总结：版本控制 = 给文件拍时间快照（snapshot），改崩了，翻照片回去。</div>
 </div>
 </div>
+
+<aside class="try"><span class="t-label">你试试</span>在电脑上建个文件夹，塞三个"网站最终版2""真的最终版"式的文件名——先体会一下没有版本控制的痛，再往下学。</aside>
 <div class="hook"><b>欲知后事如何：</b>时光机到手，第一次开机，它先问了女巫三个问题……</div>
 </section>
 
@@ -252,8 +254,6 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <div class="night-head"><span class="night-no">第二夜</span><h2>开机三件事</h2></div>
 <figure class="night-fig"><a href="img/night-02-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-02-wide-v1.png" alt="第二夜插图"></a></figure>
 <div class="night-body">
-<aside class="try"><span class="t-label">你试试</span>亲手走三步：<code>git init</code> → 写个 hello.txt → <code>git add</code> → <code>git commit -m "你好时光机"</code>。再用 <code>git log</code> 找到它。</aside>
-
 <div class="story">
 <span class="t-label story-label">故事线</span>
 <p>时光机开机，第一句："你谁？报上名来。"</p>
@@ -262,7 +262,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <p>时光机每张照片都要署名。不署名的照片，它不存。认人，是时光机家族的规矩。</p>
 <p>然后，造机器：</p>
 <pre><code>git init</code></pre>
-<p>在文件夹里原地造一台时光机。这个文件夹，从此叫仓库。</p>
+<p>你走进网站文件夹，运行 git init——等于在里面安装了一台时光机（它叫 .git，藏在文件夹里看不见）。文件夹本来就有，是你的；时光机是装进去的引擎。装完，这个文件夹就升级了，从此叫仓库。</p>
 <p>然后，拍照两步走。女巫问："为什么不能直接拍？非要先取景？"</p>
 <p>说书人笑了："因为你可以只拍三件衣服中的两件。取景框，就是让你决定——这次存什么。"</p>
 <p>第一步，取景。把改过的文件，搬进取景框：</p>
@@ -296,6 +296,8 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="one-line">一句话总结：add 是取景（进暂存区），commit 是快门，-m 是照片名。三步，一张快照。</div>
 </div>
 </div>
+
+<aside class="try"><span class="t-label">你试试</span>亲手走三步：<code>git init</code> → 写个 hello.txt → <code>git add</code> → <code>git commit -m "你好时光机"</code>。再用 <code>git log</code> 找到它。</aside>
 <div class="hook"><b>欲知后事如何：</b>照片越存越多，怎么翻看？……</div>
 </section>
 
@@ -304,8 +306,6 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="night-head"><span class="night-no">第三夜</span><h2>翻相册</h2></div>
 <figure class="night-fig"><a href="img/night-03-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-03-wide-v1.png" alt="第三夜插图"></a></figure>
 <div class="night-body">
-<aside class="try"><span class="t-label">你试试</span>把 hello.txt 改一个字，依次跑 <code>git status</code> / <code>git diff</code> / <code>git log</code>，说出三者的分工：状态、差别、历史。</aside>
-
 <div class="story">
 <span class="t-label story-label">故事线</span>
 <p>照片存多了，得会翻。女巫学会三招。</p>
@@ -352,6 +352,8 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="one-line">一句话总结：status 照镜子，log 翻目录，diff 找不同。</div>
 </div>
 </div>
+
+<aside class="try"><span class="t-label">你试试</span>把 hello.txt 改一个字，依次跑 <code>git status</code> / <code>git diff</code> / <code>git log</code>，说出三者的分工：状态、差别、历史。</aside>
 <div class="hook"><b>欲知后事如何：</b>翻到三天前的照片，女巫真想回去。那张照片里，网站还是好的……</div>
 </section>
 
@@ -360,8 +362,6 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="night-head"><span class="night-no">第四夜</span><h2>后悔药，兑现</h2></div>
 <figure class="night-fig"><a href="img/night-04-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-04-wide-v1.png" alt="第四夜插图"></a></figure>
 <div class="night-body">
-<aside class="try"><span class="t-label">你试试</span>故意写错一行，先用 <code>git checkout --</code> 创可贴救回来；再故意把 commit 名字写错，用 <code>git commit --amend</code> 改掉它。</aside>
-
 <div class="story">
 <span class="t-label story-label">故事线</span>
 <p>后悔药，今晚兑现。两种吃法。</p>
@@ -395,6 +395,8 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="one-line">一句话总结：checkout 修一张照片，reset 倒整条时间线。--hard 是核按钮，新手先别碰。</div>
 </div>
 </div>
+
+<aside class="try"><span class="t-label">你试试</span>故意写错一行，先用 <code>git checkout --</code> 创可贴救回来；再故意把 commit 名字写错，用 <code>git commit --amend</code> 改掉它。</aside>
 <div class="hook"><b>欲知后事如何：</b>老板娘又来了："加个夜间模式。但现在的版本别动，客人还在用。"一个身体，怎么同时做两件事？……</div>
 </section>
 
@@ -403,8 +405,6 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="night-head"><span class="night-no">第五夜</span><h2>平行宇宙</h2></div>
 <figure class="night-fig"><a href="img/night-05-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-05-wide-v1.png" alt="第五夜插图"></a></figure>
 <div class="night-body">
-<aside class="try"><span class="t-label">你试试</span>开个分支 <code>test-rename</code>，跳过去随便改，改完删掉它。体会一下：一张小纸条的成本，零心理负担。</aside>
-
 <div class="story">
 <span class="t-label story-label">故事线</span>
 <p>时光机的终极功能：开平行宇宙。分支，就是这么回事。</p>
@@ -437,6 +437,8 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="one-line">一句话总结：branch = 平行宇宙，互不干扰。main 是主宇宙，大本营。</div>
 </div>
 </div>
+
+<aside class="try"><span class="t-label">你试试</span>开个分支 <code>test-rename</code>，跳过去随便改，改完删掉它。体会一下：一张小纸条的成本，零心理负担。</aside>
 <div class="hook"><b>欲知后事如何：</b>夜间模式调好了，怎么把成果搬回主宇宙？……</div>
 </section>
 
@@ -445,8 +447,6 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="night-head"><span class="night-no">第六夜</span><h2>宇宙合并，与打架</h2></div>
 <figure class="night-fig"><a href="img/night-06-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-06-wide-v1.png" alt="第六夜插图"></a></figure>
 <div class="night-body">
-<aside class="try"><span class="t-label">你试试</span>在分支和 main 里各改同一文件的同一行，合并，看冲突标记长什么样，手动裁完再 <code>commit</code>。记住 <code>--abort</code> 随时能跑。</aside>
-
 <div class="story">
 <span class="t-label story-label">故事线</span>
 <p>搬成果，叫合并。先回主宇宙：</p>
@@ -488,6 +488,8 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <div class="one-line">一句话总结：merge = 搬运成果；conflict = 同一行两种改法，机器投降，人来裁决。裁完再存一张快照。</div>
 </div>
 </div>
+
+<aside class="try"><span class="t-label">你试试</span>在分支和 main 里各改同一文件的同一行，合并，看冲突标记长什么样，手动裁完再 <code>commit</code>。记住 <code>--abort</code> 随时能跑。</aside>
 <div class="hook"><b>欲知后事如何：</b>女巫想把网站给另一个城市的朋友看。时光机再大，也飞不过去……</div>
 </section>
 
@@ -503,8 +505,6 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <div class="night-head"><span class="night-no">第七夜</span><h2>云端时间管理局</h2></div>
 <figure class="night-fig"><a href="img/night-07-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-07-wide-v1.png" alt="第七夜插图"></a></figure>
 <div class="night-body">
-<aside class="try"><span class="t-label">你试试</span>跑 <code>git remote -v</code>，看 origin 到底指向哪；再 <code>pull</code> 一次，体会"先下载（fetch）再合并"。</aside>
-
 <div class="story">
 <span class="t-label story-label">故事线</span>
 <p>GitHub，就是云端时间管理局。免费帮你存时间线，还能给朋友看。</p>
@@ -544,6 +544,8 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <div class="one-line">一句话总结：GitHub 是云端保险柜。push 上传，pull 下载，clone 整台搬走。</div>
 </div>
 </div>
+
+<aside class="try"><span class="t-label">你试试</span>跑 <code>git remote -v</code>，看 origin 到底指向哪；再 <code>pull</code> 一次，体会"先下载（fetch）再合并"。</aside>
 <div class="hook"><b>欲知后事如何：</b>故事听了七夜。第八夜，不讲故事了，动手……</div>
 </section>
 
@@ -552,8 +554,6 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <div class="night-head"><span class="night-no">第八夜</span><h2>亲手造一台</h2></div>
 <figure class="night-fig"><a href="img/night-08-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-08-wide-v1.png" alt="第八夜插图"></a></figure>
 <div class="night-body">
-<aside class="try"><span class="t-label">你试试</span>从空文件夹开始，五步走完：init → add → commit → remote → push。走完你就亲手发布过一回了。</aside>
-
 <div class="story">
 <span class="t-label story-label">故事线</span>
 <p>今夜没有女巫，只有你。</p>
@@ -584,6 +584,8 @@ git push -u origin main</code></pre>
 <div class="one-line">一句话总结：init → add → commit → remote → push，五步，你的网站就有了时光机。</div>
 </div>
 </div>
+
+<aside class="try"><span class="t-label">你试试</span>从空文件夹开始，五步走完：init → add → commit → remote → push。走完你就亲手发布过一回了。</aside>
 </section>
 
 <div class="hook"><b>欲知后事如何：</b>网站传上云端了。但三天后，女巫收到管理局的警告信……第九夜，GitHub 篇。</div>
@@ -603,8 +605,6 @@ git push -u origin main</code></pre>
 <div class="night-head"><span class="night-no">第九夜</span><h2>不许拍照名单，与魔法钥匙</h2></div>
 <figure class="night-fig"><a href="img/night-09-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-09-wide-v1.png" alt="第九夜插图"></a></figure>
 <div class="night-body">
-<aside class="try"><span class="t-label">你试试</span>写个 <code>.gitignore</code>，把 <code>.DS_Store</code> 和 <code>*.log</code> 写进去，再 <code>git status</code> 验证垃圾消失。</aside>
-
 <div class="story">
 <span class="t-label story-label">故事线</span>
 <p>女巫第一次 push，兴高采烈。结果第二天，管理局寄来警告信：</p>
@@ -647,6 +647,8 @@ git push -u origin main</code></pre>
 <div class="one-line">一句话总结：.gitignore 是不许拍照名单，SSH 是魔法钥匙。一个管干净，一个管省事。</div>
 </div>
 </div>
+
+<aside class="try"><span class="t-label">你试试</span>写个 <code>.gitignore</code>，把 <code>.DS_Store</code> 和 <code>*.log</code> 写进去，再 <code>git status</code> 验证垃圾消失。</aside>
 <div class="hook"><b>欲知后事如何：</b>钥匙配好，管理局的门为她敞开。但她发现，管理局里还有别的女巫在修同一座塔……</div>
 </section>
 
@@ -655,8 +657,6 @@ git push -u origin main</code></pre>
 <div class="night-head"><span class="night-no">第十夜</span><h2>请求合并</h2></div>
 <figure class="night-fig"><a href="img/night-10-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-10-wide-v1.png" alt="第十夜插图"></a></figure>
 <div class="night-body">
-<aside class="try"><span class="t-label">你试试</span>去 GitHub 网页上找个文件的铅笔图标，改个错别字直接 commit——体会"不用终端也能贡献"。</aside>
-
 <div class="story">
 <span class="t-label story-label">故事线</span>
 <p>女巫在管理局闲逛，发现一座"公共魔法塔"——开源的咒语大全，人人可用。但塔上有个错别字：把"悬浮咒"写成了"悬浮猪"。</p>
@@ -692,6 +692,8 @@ git push -u origin main</code></pre>
 <div class="one-line">一句话总结：Fork 复制，改完 push，发 PR 求合并。公共的塔不硬闯，递申请。</div>
 </div>
 </div>
+
+<aside class="try"><span class="t-label">你试试</span>去 GitHub 网页上找个文件的铅笔图标，改个错别字直接 commit——体会"不用终端也能贡献"。</aside>
 <div class="hook"><b>欲知后事如何：</b>PR 被合入了！名字上了贡献者名单。但她自己的网站，还躺在本地睡觉，没人看得见……</div>
 </section>
 
@@ -700,8 +702,6 @@ git push -u origin main</code></pre>
 <div class="night-head"><span class="night-no">第十一夜 · 终夜</span><h2>展示橱窗</h2></div>
 <figure class="night-fig"><a href="img/night-11-wide-v1.png" target="_blank" rel="noopener"><img src="img/night-11-wide-v1.png" alt="第十一夜 · 终夜插图"></a></figure>
 <div class="night-body">
-<aside class="try"><span class="t-label">你试试</span>给你的仓库开 Pages，把生成的网址发给朋友。你的第一个展品，上橱窗了。</aside>
-
 <div class="story">
 <span class="t-label story-label">故事线</span>
 <p>女巫的网站在时光机里躺了很久，只有她自己能看。她想让全世界看到。</p>
@@ -737,6 +737,8 @@ git push -u origin main</code></pre>
 <div class="one-line">一句话总结：Settings → Pages → 选 main → 全世界可见。push 即发布。</div>
 </div>
 </div>
+
+<aside class="try"><span class="t-label">你试试</span>给你的仓库开 Pages，把生成的网址发给朋友。你的第一个展品，上橱窗了。</aside>
 </section>
 
 <div class="glossary">
