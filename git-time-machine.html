@@ -28,7 +28,13 @@ line-height:1.9;
 padding:0 0 120px;
 }
 .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-header.hero{padding:72px 0 20px;text-align:center}
+header.hero{padding:88px 20px 30px;text-align:center}
+header.hero .kicker{font-family:"ZCOOL KuaiLe",sans-serif !important;font-size:17px;letter-spacing:.3em}
+header.hero h1{font-family:"ZCOOL KuaiLe",sans-serif;color:#4d4361;font-size:clamp(44px,7vw,72px);letter-spacing:.08em;margin:10px 0 16px}
+header.hero .sub{font-size:16px;color:#8b877d;letter-spacing:.12em;margin-bottom:30px}
+.start-btn{display:inline-block;font-family:"ZCOOL KuaiLe",sans-serif;font-size:19px;letter-spacing:.2em;color:#fff;background:#4d4361;border-radius:999px;padding:14px 44px 14px 52px;text-decoration:none;box-shadow:0 8px 24px rgba(77,67,97,.30)}
+.start-btn:hover{background:#3a2f52}
+.cover-rule{height:1px;max-width:420px;margin:44px auto 0;background:linear-gradient(90deg,transparent,#c9a84c,transparent)}
 header.hero.kicker{
 display:inline-block;font-size:13px;letter-spacing:.45em;color:var(--gold);
 border:1px solid var(--gold);border-radius:999px;padding:6px 18px 6px 24px;margin-bottom:26px;
@@ -134,6 +140,27 @@ aside.example .t-label{color:#6f6a5e}
 .chapter-sub{font-size:15px;color:#8b877d;letter-spacing:.06em}
 .chapter-range{display:inline-block;margin-top:14px;font-size:13px;color:#a09a8c;border:1px solid #d8d2c2;border-radius:20px;padding:4px 16px;letter-spacing:.15em}
 
+.copy-btn{position:absolute;top:10px;right:10px;font-size:12px;padding:4px 12px;border-radius:14px;border:1px solid #d5cde4;background:#f6f2fb;color:#4d4361;cursor:pointer;letter-spacing:.1em}
+.copy-btn:hover{background:#4d4361;color:#fff;border-color:#4d4361}
+.night-nav{display:flex;justify-content:space-between;max-width:760px;margin:34px auto 0;padding:0 6px}
+.night-nav a{font-family:"ZCOOL KuaiLe",sans-serif;font-size:16px;color:#b08d3e;text-decoration:none;border:1px solid #e2d9c2;border-radius:20px;padding:8px 20px;background:#fbf9f3}
+.night-nav a:hover{background:#b08d3e;color:#fff;border-color:#b08d3e}
+.resume-bar{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#2e2540;color:#f2ead8;font-size:14px;padding:12px 22px;border-radius:28px;box-shadow:0 6px 24px rgba(46,37,64,.35);z-index:50;display:none;letter-spacing:.05em}
+.resume-bar a{color:#ffd98a;text-decoration:none;font-weight:700;margin-left:8px}
+.resume-bar .close{margin-left:12px;cursor:pointer;opacity:.6}
+.vol-label{font-family:"ZCOOL KuaiLe",sans-serif;font-size:15px;color:#b08d3e;letter-spacing:.2em;margin:0 6px;align-self:center}
+nav.nights{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center}
+.read-time{font-size:12.5px;color:#a09a8c;letter-spacing:.1em;margin-left:10px;white-space:nowrap}
+.night-head{display:flex;align-items:baseline}
+.try{margin:20px 0 6px;padding:14px 18px;border-left:3px solid #4d4361;background:#f1edf7;border-radius:0 10px 10px 0;font-size:14.5px;color:#3a3350}
+.try .t-label{color:#4d4361}
+.glossary{max-width:760px;margin:70px auto 0}
+.glossary h2{font-family:"ZCOOL KuaiLe",sans-serif;font-size:26px;color:#4d4361;text-align:center;margin-bottom:8px}
+.glossary .g-sub{text-align:center;color:#8b877d;font-size:14px;margin-bottom:24px}
+.g-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.g-item{font-size:14.5px;line-height:1.7;color:#3e372f;border-bottom:1px dashed #e2dccb;padding-bottom:8px}
+.g-item b{color:#2b2620}
+@media(max-width:640px){.g-grid{grid-template-columns:1fr}}
 .part-div{max-width:760px;margin:80px auto 0;text-align:center}
 .part-div h2{font-size:22px;letter-spacing:.25em;color:var(--gold);margin-bottom:10px}
 .part-div p{color:var(--ink-soft);font-size:14px}
@@ -157,16 +184,18 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <div class="wrap">
 
 <header class="hero">
-<div class="kicker">一千零一夜体 · 第一卷：第一夜 — 第十一夜</div>
+<div class="kicker">一 千 零 一 夜 体</div>
 <h1>女巫的时光机</h1>
-<div class="sub">新手 Git 上手记 · 学名 Git</div>
+<div class="sub">新手 Git 上手记 · 全十一夜 · 两个卷</div>
+<a class="start-btn" href="#n1">开 始 第 一 夜</a>
+<div class="cover-rule"></div>
 </header>
 
 <p class="guide">阅读指南：每夜两条轨道。<b>左边是故事</b>，负责好玩、负责记住；<b>右边是教科书</b>，平行世界，负责讲清。<br>手机上看时，故事在上，教科书在下，顺序一样。</p>
 
 <nav class="nights">
-<a href="#n1">第一夜</a><a href="#n2">第二夜</a><a href="#n3">第三夜</a><a href="#n4">第四夜</a>
-<a href="#n5">第五夜</a><a href="#n6">第六夜</a><a href="#n7">第七夜</a><a href="#n8">第八夜</a><a href="#n9">第九夜</a><a href="#n10">第十夜</a><a href="#n11">第十一夜</a>
+<span class="vol-label">第一卷</span><a href="#n1">第一夜</a><a href="#n2">第二夜</a><a href="#n3">第三夜</a><a href="#n4">第四夜</a><a href="#n5">第五夜</a><a href="#n6">第六夜</a>
+<span class="vol-label">第二卷</span><a href="#n7">第七夜</a><a href="#n8">第八夜</a><a href="#n9">第九夜</a><a href="#n10">第十夜</a><a href="#n11">第十一夜</a>
 </nav>
 
 <div class="prologue">
@@ -213,6 +242,7 @@ padding:44px 40px;background:var(--card);border:1px solid var(--line);border-rad
 <div class="one-line">一句话总结：版本控制 = 给文件拍时间快照（snapshot），改崩了，翻照片回去。</div>
 </div>
 </div>
+<aside class="try"><span class="t-label">你试试</span>在电脑上建个文件夹，塞三个"网站最终版2""真的最终版"式的文件名——先体会一下没有版本控制的痛，再往下学。</aside>
 <div class="hook"><b>欲知后事如何：</b>时光机到手，第一次开机，它先问了女巫三个问题……</div>
 </section>
 
@@ -263,6 +293,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="one-line">一句话总结：add 是取景（进暂存区），commit 是快门，-m 是照片名。三步，一张快照。</div>
 </div>
 </div>
+<aside class="try"><span class="t-label">你试试</span>亲手走三步：<code>git init</code> → 写个 hello.txt → <code>git add</code> → <code>git commit -m "你好时光机"</code>。再用 <code>git log</code> 找到它。</aside>
 <div class="hook"><b>欲知后事如何：</b>照片越存越多，怎么翻看？……</div>
 </section>
 
@@ -317,6 +348,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="one-line">一句话总结：status 照镜子，log 翻目录，diff 找不同。</div>
 </div>
 </div>
+<aside class="try"><span class="t-label">你试试</span>把 hello.txt 改一个字，依次跑 <code>git status</code> / <code>git diff</code> / <code>git log</code>，说出三者的分工：状态、差别、历史。</aside>
 <div class="hook"><b>欲知后事如何：</b>翻到三天前的照片，女巫真想回去。那张照片里，网站还是好的……</div>
 </section>
 
@@ -358,6 +390,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="one-line">一句话总结：checkout 修一张照片，reset 倒整条时间线。--hard 是核按钮，新手先别碰。</div>
 </div>
 </div>
+<aside class="try"><span class="t-label">你试试</span>故意写错一行，先用 <code>git checkout --</code> 创可贴救回来；再故意把 commit 名字写错，用 <code>git commit --amend</code> 改掉它。</aside>
 <div class="hook"><b>欲知后事如何：</b>老板娘又来了："加个夜间模式。但现在的版本别动，客人还在用。"一个身体，怎么同时做两件事？……</div>
 </section>
 
@@ -398,6 +431,7 @@ git config --global user.email "witchj@example.com"</code></pre>
 <div class="one-line">一句话总结：branch = 平行宇宙，互不干扰。main 是主宇宙，大本营。</div>
 </div>
 </div>
+<aside class="try"><span class="t-label">你试试</span>开个分支 <code>test-rename</code>，跳过去随便改，改完删掉它。体会一下：一张小纸条的成本，零心理负担。</aside>
 <div class="hook"><b>欲知后事如何：</b>夜间模式调好了，怎么把成果搬回主宇宙？……</div>
 </section>
 
@@ -447,8 +481,16 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <div class="one-line">一句话总结：merge = 搬运成果；conflict = 同一行两种改法，机器投降，人来裁决。裁完再存一张快照。</div>
 </div>
 </div>
+<aside class="try"><span class="t-label">你试试</span>在分支和 main 里各改同一文件的同一行，合并，看冲突标记长什么样，手动裁完再 <code>commit</code>。记住 <code>--abort</code> 随时能跑。</aside>
 <div class="hook"><b>欲知后事如何：</b>女巫想把网站给另一个城市的朋友看。时光机再大，也飞不过去……</div>
 </section>
+
+<div class="chapter-div">
+<div class="chapter-kicker">第 二 卷</div>
+<div class="chapter-title">云端邮局与魔法钥匙</div>
+<div class="chapter-sub">GitHub 远程协作 · 推送 / 拉取 / Fork / PR / 发布</div>
+<div><span class="chapter-range">第 七 夜 → 第 十 一 夜</span></div>
+</div>
 
 <!-- 第七夜 -->
 <section class="night" id="n7">
@@ -494,6 +536,7 @@ git commit -m "裁决：按钮用红色"</code></pre>
 <div class="one-line">一句话总结：GitHub 是云端保险柜。push 上传，pull 下载，clone 整台搬走。</div>
 </div>
 </div>
+<aside class="try"><span class="t-label">你试试</span>跑 <code>git remote -v</code>，看 origin 到底指向哪；再 <code>pull</code> 一次，体会"先下载（fetch）再合并"。</aside>
 <div class="hook"><b>欲知后事如何：</b>故事听了七夜。第八夜，不讲故事了，动手……</div>
 </section>
 
@@ -534,6 +577,7 @@ git push -u origin main</code></pre>
 </div>
 </section>
 
+<aside class="try"><span class="t-label">你试试</span>从空文件夹开始，五步走完：init → add → commit → remote → push。走完你就亲手发布过一回了。</aside>
 <div class="hook"><b>欲知后事如何：</b>网站传上云端了。但三天后，女巫收到管理局的警告信……第九夜，GitHub 篇。</div>
 
 <div class="final">
@@ -593,6 +637,7 @@ git push -u origin main</code></pre>
 <div class="one-line">一句话总结：.gitignore 是不许拍照名单，SSH 是魔法钥匙。一个管干净，一个管省事。</div>
 </div>
 </div>
+<aside class="try"><span class="t-label">你试试</span>写个 <code>.gitignore</code>，把 <code>.DS_Store</code> 和 <code>*.log</code> 写进去，再 <code>git status</code> 验证垃圾消失。</aside>
 <div class="hook"><b>欲知后事如何：</b>钥匙配好，管理局的门为她敞开。但她发现，管理局里还有别的女巫在修同一座塔……</div>
 </section>
 
@@ -636,6 +681,7 @@ git push -u origin main</code></pre>
 <div class="one-line">一句话总结：Fork 复制，改完 push，发 PR 求合并。公共的塔不硬闯，递申请。</div>
 </div>
 </div>
+<aside class="try"><span class="t-label">你试试</span>去 GitHub 网页上找个文件的铅笔图标，改个错别字直接 commit——体会"不用终端也能贡献"。</aside>
 <div class="hook"><b>欲知后事如何：</b>PR 被合入了！名字上了贡献者名单。但她自己的网站，还躺在本地睡觉，没人看得见……</div>
 </section>
 
@@ -679,7 +725,14 @@ git push -u origin main</code></pre>
 <div class="one-line">一句话总结：Settings → Pages → 选 main → 全世界可见。push 即发布。</div>
 </div>
 </div>
+<aside class="try"><span class="t-label">你试试</span>给你的仓库开 Pages，把生成的网址发给朋友。你的第一个展品，上橱窗了。</aside>
 </section>
+
+<div class="glossary">
+<h2>术语表</h2>
+<div class="g-sub">十一夜所有关键词，一页查完</div>
+<div class="g-grid"><div class="g-item"><b>版本控制（version control）</b> — 记录文件每一次变化，随时回去。</div><div class="g-item"><b>仓库（repository）</b> — 被 Git 管理的文件夹。</div><div class="g-item"><b>工作区（working directory）</b> — 你实际改文件的地方。</div><div class="g-item"><b>暂存区（staging area）</b> — 取景框，决定这次存什么。</div><div class="g-item"><b>提交（commit）</b> — 按快门，一张快照进仓库。</div><div class="g-item"><b>git status</b> — 照镜子，看状态。</div><div class="g-item"><b>git log</b> — 翻目录，看历史。</div><div class="g-item"><b>git diff</b> — 找不同，看差别。</div><div class="g-item"><b>HEAD</b> — 书签：你现在站在哪张照片上。</div><div class="g-item"><b>git checkout -- &lt;文件名&gt;</b> — 创可贴，还原一个文件。</div><div class="g-item"><b>git reset --hard</b> — 核按钮，倒带整条时间线。</div><div class="g-item"><b>git revert</b> — 反向提交，安全撤销已 push 的。</div><div class="g-item"><b>git commit --amend</b> — 改上一次提交（忘加文件/写错字）。</div><div class="g-item"><b>分支（branch）</b> — 平行宇宙，41 字节的小纸条。</div><div class="g-item"><b>git branch &lt;名字&gt;</b> — 只建不跳，你还站在原地。</div><div class="g-item"><b>git switch &lt;名字&gt;</b> — 跳进那个宇宙。</div><div class="g-item"><b>main</b> — 主宇宙，大本营。</div><div class="g-item"><b>合并（merge）</b> — 把宇宙合回主宇宙。</div><div class="g-item"><b>冲突（conflict）</b> — 同一文件的同一行两边都改了，等人裁决。</div><div class="g-item"><b>快进合并（fast-forward）</b> — 主宇宙没动过，书签往前挪。</div><div class="g-item"><b>git merge --abort</b> — 合并打一半，一键回到合并前。</div><div class="g-item"><b>远程仓库（remote）</b> — 云端的仓库。</div><div class="g-item"><b>推送（push）</b> — 传上云。</div><div class="g-item"><b>拉取（pull）</b> — fetch（只下载）+ merge。</div><div class="g-item"><b>克隆（clone）</b> — 整仓下载到本地。</div><div class="g-item"><b>.gitignore</b> — 不许拍照名单。</div><div class="g-item"><b>SSH / HTTPS</b> — 两把云端钥匙。</div><div class="g-item"><b>复刻（Fork）</b> — 云端复制到你名下。</div><div class="g-item"><b>PR（Pull Request）</b> — 请求合并，开源世界的通用语言。</div><div class="g-item"><b>GitHub Pages</b> — 免费静态网站橱窗，push 即发布。</div></div>
+</div>
 
 <div class="final">
 <h2>真问题</h2>
@@ -687,5 +740,53 @@ git push -u origin main</code></pre>
 </div>
 
 </div>
+<script>
+(function(){
+/* 复制按钮 */
+document.querySelectorAll('.story pre').forEach(function(pre){
+  pre.style.position='relative';
+  var btn=document.createElement('button');
+  btn.className='copy-btn';btn.textContent='复制';
+  btn.onclick=function(){
+    var t=pre.innerText.replace(/复制$/,'');
+    navigator.clipboard.writeText(t).then(function(){
+      btn.textContent='已复制';setTimeout(function(){btn.textContent='复制'},1500);
+    });
+  };
+  pre.appendChild(btn);
+});
+/* 上一夜 / 下一夜 */
+var nights=Array.prototype.slice.call(document.querySelectorAll('section.night'));
+var names={n1:'第一夜',n2:'第二夜',n3:'第三夜',n4:'第四夜',n5:'第五夜',n6:'第六夜',n7:'第七夜',n8:'第八夜',n9:'第九夜',n10:'第十夜',n11:'第十一夜'};
+nights.forEach(function(sec,i){
+  var nav=document.createElement('div');nav.className='night-nav';
+  var l=i>0?'<a href="#'+nights[i-1].id+'">← '+names[nights[i-1].id]+'</a>':'<span></span>';
+  var r=i<nights.length-1?'<a href="#'+nights[i+1].id+'">'+names[nights[i+1].id]+' →</a>':'<span></span>';
+  nav.innerHTML=l+r;sec.appendChild(nav);
+});
+/* 阅读时长（按字数估） */
+nights.forEach(function(sec){
+  var mins=Math.max(4,Math.round(sec.innerText.length/650));
+  var head=sec.querySelector('.night-head');
+  if(head){var sp=document.createElement('span');sp.className='read-time';sp.textContent='约'+mins+'分钟';head.appendChild(sp);}
+});
+/* 进度记忆 */
+var bar=document.createElement('div');bar.className='resume-bar';document.body.appendChild(bar);
+function showResume(id){
+  bar.innerHTML='上次读到'+names[id]+'<a href="#'+id+'">继续 →</a><span class="close">✕</span>';
+  bar.style.display='block';
+  bar.querySelector('.close').onclick=function(){bar.style.display='none'};
+}
+var last=null;
+try{last=localStorage.getItem('gtm-last')}catch(e){}
+if(last&&last!=='n1'&&names[last]){showResume(last)}
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){try{localStorage.setItem('gtm-last',e.target.id)}catch(err){}}});
+  },{rootMargin:'-40% 0px -55% 0px'});
+  nights.forEach(function(n){io.observe(n)});
+}
+})();
+</script>
 </body>
 </html>
